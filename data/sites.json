@@ -1,0 +1,447 @@
+{
+  "meta": {
+    "title": "Taste Log",
+    "subtitle": "一份有判断的网页审美档案",
+    "started": "2026-03-17",
+    "license": "CC BY 4.0",
+    "note": "收录标准见 docs/criteria.md，审美偏好体系见 docs/preferences.md"
+  },
+  "categories": [
+    { "key": "editorial", "zh": "杂志刊物感", "en": "Editorial" },
+    { "key": "longform", "zh": "长文阅读页", "en": "Longform Reading" },
+    { "key": "product", "zh": "产品与工具界面", "en": "Product / Tool UI" },
+    { "key": "type", "zh": "字体工作室", "en": "Type Foundry" },
+    { "key": "studio", "zh": "设计工作室", "en": "Design Studio" },
+    { "key": "motion", "zh": "交互与动效", "en": "Motion / Interactive" },
+    { "key": "brand", "zh": "品牌识别", "en": "Brand Identity" },
+    { "key": "curation", "zh": "策展与灵感网络", "en": "Curation" },
+    { "key": "portfolio", "zh": "个人主页与作品集", "en": "Portfolio" }
+  ],
+  "sites": [
+    {
+      "id": "kinfolk",
+      "name": "Kinfolk",
+      "url": "https://www.kinfolk.com/",
+      "date": "2026-03-19",
+      "category": "editorial",
+      "tag": "主站气质线",
+      "pinned": true,
+      "note": "主站气质的母本。图片、文字、留白之间的关系是被编辑过的，不是排出来的。生活世界感来自内容本身，不靠滤镜和字体撑。"
+    },
+    {
+      "id": "craft",
+      "name": "Craft",
+      "url": "https://www.craft.do/zh-CN",
+      "date": "2026-03-21",
+      "category": "product",
+      "tag": "写作产品线",
+      "pinned": true,
+      "note": "写作产品线的母本。温柔工具感——可爱但不幼稚，亲和、好打开、好停留。适合日记、记录、写作类产品页参考。"
+    },
+    {
+      "id": "land-book",
+      "name": "Land-book",
+      "url": "https://land-book.com/",
+      "date": "2026-03-19",
+      "category": "curation",
+      "tag": "模块灵感入口",
+      "pinned": true,
+      "note": "不是拿来欣赏的，是拿来抓模块的。要一个 hero、一段定价区、一个页脚时来这里翻，比翻 Awwwards 快。"
+    },
+    {
+      "id": "linear",
+      "name": "Linear",
+      "url": "https://linear.app/",
+      "date": "2026-03-19",
+      "category": "product",
+      "tag": "科技秩序感",
+      "pinned": true,
+      "note": "科技秩序感的基准线。分层块状 + 蓝色点亮 + 克制动效，三样缺一样就散。白底也能做出冷静的技术气质，靠的是排列不是配色。"
+    },
+
+    {
+      "id": "kometa",
+      "name": "KOMETA",
+      "url": "https://kometatype.com/studio",
+      "date": "2026-03-28",
+      "category": "type",
+      "tag": "Type Studio",
+      "note": "字体工作室的标准做法：字本身就是内容，页面只负责让字站住。看它怎么用最少的装饰把字撑起来。"
+    },
+    {
+      "id": "s6foundry",
+      "name": "S6 Foundry",
+      "url": "https://www.s6foundry.com/",
+      "date": "2026-03-28",
+      "category": "type",
+      "tag": "Brand Typography"
+    },
+    {
+      "id": "a-foundry",
+      "name": "a.Foundry",
+      "url": "https://a-foundry.com/",
+      "date": "2026-03-28",
+      "category": "type",
+      "tag": "Scandinavian Type"
+    },
+    {
+      "id": "studio-zosia",
+      "name": "Studio Zosia",
+      "url": "https://studiozosia.com/",
+      "date": "2026-03-28",
+      "category": "studio",
+      "tag": "Editorial Studio"
+    },
+    {
+      "id": "underscore",
+      "name": "Underscore",
+      "url": "https://underscoretype.com/",
+      "date": "2026-03-28",
+      "category": "type",
+      "tag": "Foundry / Consultancy"
+    },
+    {
+      "id": "typogram",
+      "name": "Typogram",
+      "url": "https://typogram.co/",
+      "date": "2026-03-28",
+      "category": "product",
+      "tag": "Typography Tool"
+    },
+
+    {
+      "id": "area17",
+      "name": "AREA 17",
+      "url": "https://area17.com/",
+      "date": "2026-03-26",
+      "category": "studio",
+      "tag": "Studio System"
+    },
+    {
+      "id": "locomotive",
+      "name": "Locomotive",
+      "url": "https://www.locomotive.ca/en",
+      "date": "2026-03-26",
+      "category": "studio",
+      "tag": "Studio Narrative"
+    },
+    {
+      "id": "studio-feixen",
+      "name": "Studio Feixen",
+      "url": "https://www.studiofeixen.ch/",
+      "date": "2026-03-26",
+      "category": "studio",
+      "tag": "Graphic Identity"
+    },
+    {
+      "id": "diagram",
+      "name": "Diagram",
+      "url": "https://diagram.co/",
+      "date": "2026-03-26",
+      "category": "brand",
+      "tag": "AI Product Brand"
+    },
+    {
+      "id": "monotype",
+      "name": "Monotype",
+      "url": "https://www.monotype.com/",
+      "date": "2026-03-26",
+      "category": "type",
+      "tag": "Type System"
+    },
+    {
+      "id": "lovefrom",
+      "name": "LoveFrom",
+      "url": "https://www.lovefrom.com/",
+      "date": "2026-03-26",
+      "category": "studio",
+      "tag": "Craft Direction",
+      "note": "整页几乎只有文字。敢这么做的前提是文字本身够硬。反过来说：如果一个页面必须靠视觉救场，先回去改文案。"
+    },
+
+    {
+      "id": "rive",
+      "name": "Rive",
+      "url": "https://rive.app/",
+      "date": "2026-03-25",
+      "category": "motion",
+      "tag": "Interactive Motion",
+      "note": "开场交互装置——火箭飘出来那一下，第一屏的记忆点就立住了。动效不是装饰，是让人记住你是谁。"
+    },
+    {
+      "id": "spline",
+      "name": "Spline",
+      "url": "https://spline.design/",
+      "date": "2026-03-25",
+      "category": "motion",
+      "tag": "3D Experience",
+      "note": "分层块状 + 蓝色点亮 + 块状动效 + 流光感。是 Linear 那条科技感偏好的升级版，多了结构的厚度。"
+    },
+    {
+      "id": "webflow",
+      "name": "Webflow",
+      "url": "https://webflow.com/",
+      "date": "2026-03-25",
+      "category": "product",
+      "tag": "Template System"
+    },
+    {
+      "id": "cargo",
+      "name": "Cargo",
+      "url": "https://cargo.site/",
+      "date": "2026-03-25",
+      "category": "portfolio",
+      "tag": "Artist Portfolios"
+    },
+    {
+      "id": "milanote",
+      "name": "Milanote",
+      "url": "https://milanote.com/",
+      "date": "2026-03-25",
+      "category": "product",
+      "tag": "Creative Boards"
+    },
+    {
+      "id": "a24",
+      "name": "A24",
+      "url": "https://a24films.com/",
+      "date": "2026-03-25",
+      "category": "brand",
+      "tag": "Editorial Brand",
+      "note": "电影公司做出了刊物的样子。适合当「源泉刊物封面」这类方向的参考。"
+    },
+
+    {
+      "id": "figma",
+      "name": "Figma",
+      "url": "https://www.figma.com/",
+      "date": "2026-03-23",
+      "category": "product",
+      "tag": "Product System"
+    },
+    {
+      "id": "monocle",
+      "name": "Monocle",
+      "url": "https://monocle.com/",
+      "date": "2026-03-23",
+      "category": "editorial",
+      "tag": "Editorial"
+    },
+    {
+      "id": "arc",
+      "name": "Arc",
+      "url": "https://arc.net/",
+      "date": "2026-03-23",
+      "category": "brand",
+      "tag": "Browser Brand"
+    },
+    {
+      "id": "mubi",
+      "name": "MUBI",
+      "url": "https://mubi.com/",
+      "date": "2026-03-23",
+      "category": "curation",
+      "tag": "Curation"
+    },
+    {
+      "id": "huly",
+      "name": "Huly",
+      "url": "https://huly.io/",
+      "date": "2026-03-23",
+      "category": "motion",
+      "tag": "Workflow UI",
+      "note": "星际流光暗黑科幻：流光轨迹 + 宇宙空间感 + 黑暗中发光。是白底偏好之外唯一站得住的暗色方向。"
+    },
+    {
+      "id": "itsnicethat",
+      "name": "It's Nice That",
+      "url": "https://www.itsnicethat.com/",
+      "date": "2026-03-23",
+      "category": "curation",
+      "tag": "Creative Feed"
+    },
+
+    {
+      "id": "apple",
+      "name": "Apple",
+      "url": "https://www.apple.com/",
+      "date": "2026-03-22",
+      "category": "product",
+      "tag": "白底秩序 / 产品排版",
+      "note": "白底秩序的天花板。看的不是它多好看，是它怎么在信息量极大的情况下还让人一眼看清顺序。"
+    },
+    {
+      "id": "framer",
+      "name": "Framer",
+      "url": "https://www.framer.com/",
+      "date": "2026-03-22",
+      "category": "product",
+      "tag": "模板系统 / 现代感"
+    },
+    {
+      "id": "curvit",
+      "name": "Curvit",
+      "url": "https://curvit.me/",
+      "date": "2026-03-22",
+      "category": "portfolio",
+      "tag": "个人主页 / 轻履历感",
+      "note": "分层定价按钮结构：极简配色下靠主价格和递进档位建立层级。个人主页里少见的转化区做法。"
+    },
+    {
+      "id": "perplexity",
+      "name": "Perplexity",
+      "url": "https://www.perplexity.ai/",
+      "date": "2026-03-22",
+      "category": "product",
+      "tag": "清爽产品感"
+    },
+
+    {
+      "id": "attio",
+      "name": "Attio",
+      "url": "https://attio.com/",
+      "date": "2026-03-20",
+      "category": "product",
+      "tag": "CRM UI"
+    },
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "url": "https://cursor.com/",
+      "date": "2026-03-20",
+      "category": "product",
+      "tag": "IDE UX"
+    },
+    {
+      "id": "vercel",
+      "name": "Vercel",
+      "url": "https://vercel.com/",
+      "date": "2026-03-20",
+      "category": "product",
+      "tag": "Dev Platform"
+    },
+    {
+      "id": "granola",
+      "name": "Granola",
+      "url": "https://www.granola.ai/",
+      "date": "2026-03-20",
+      "category": "product",
+      "tag": "Meeting Notes"
+    },
+    {
+      "id": "warp",
+      "name": "Warp",
+      "url": "https://www.warp.dev/",
+      "date": "2026-03-20",
+      "category": "product",
+      "tag": "Terminal UX"
+    },
+    {
+      "id": "superlist",
+      "name": "Superlist",
+      "url": "https://superlist.com/",
+      "date": "2026-03-20",
+      "category": "product",
+      "tag": "Task Product"
+    },
+
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "url": "https://www.anthropic.com/",
+      "date": "2026-03-19",
+      "category": "brand",
+      "tag": "AI Brand"
+    },
+    {
+      "id": "raycast",
+      "name": "Raycast",
+      "url": "https://www.raycast.com/",
+      "date": "2026-03-19",
+      "category": "product",
+      "tag": "Launcher UX"
+    },
+    {
+      "id": "notion",
+      "name": "Notion",
+      "url": "https://www.notion.com/",
+      "date": "2026-03-19",
+      "category": "product",
+      "tag": "Knowledge UI"
+    },
+    {
+      "id": "stripe",
+      "name": "Stripe",
+      "url": "https://stripe.com/",
+      "date": "2026-03-19",
+      "category": "brand",
+      "tag": "Checkout Brand"
+    },
+    {
+      "id": "pitch",
+      "name": "Pitch",
+      "url": "https://pitch.com/",
+      "date": "2026-03-19",
+      "category": "product",
+      "tag": "Presentation SaaS"
+    },
+    {
+      "id": "arena",
+      "name": "Are.na",
+      "url": "https://www.are.na/",
+      "date": "2026-03-19",
+      "category": "curation",
+      "tag": "Curation Network"
+    },
+
+    {
+      "id": "dario-amodei",
+      "name": "Machines of Loving Grace",
+      "url": "https://darioamodei.com/essay/machines-of-loving-grace",
+      "date": "2026-03-17",
+      "category": "longform",
+      "tag": "长文 / Essay",
+      "note": "目录跟着阅读状态走，但存在感压得很低——像安静地陪读，不是不断打断。这类页面的设计目标不是展示花样，是保护注意力。适合 manifesto、作者观点页、需要建立信任感的深度内容。"
+    },
+    {
+      "id": "sam-altman",
+      "name": "Sam Altman Blog",
+      "url": "https://ia.samaltman.com/",
+      "date": "2026-03-17",
+      "category": "longform",
+      "tag": "个人博客",
+      "note": "简洁不是空，是把干扰项压到很低。文字够强的时候，页面越安静，内容越容易被信任。"
+    },
+    {
+      "id": "possible-fm",
+      "name": "Possible",
+      "url": "https://www.possible.fm/",
+      "date": "2026-03-17",
+      "category": "curation",
+      "tag": "播客 / 专题索引",
+      "note": "品牌蓝 #1EBBF0 只出现在 Logo、链接、导航和少量强调位，不铺满。AI Stories 页是很轻的索引：白底、细边框、轻微斑马纹，标题和日期并列，信息密度高但不压迫。文章多了以后做专题页可以照这个来。"
+    }
+  ],
+  "sources": [
+    {
+      "name": "Awwwards",
+      "url": "https://www.awwwards.com/websites/",
+      "note": "获奖站集合，动效和实验性最强，但也最容易被炫技带偏"
+    },
+    {
+      "name": "Land-book",
+      "url": "https://land-book.com/",
+      "note": "按模块（hero / pricing / footer）筛，抓局部最快"
+    },
+    {
+      "name": "Godly",
+      "url": "https://godly.website/",
+      "note": "筛选更狠，量少但命中率高"
+    },
+    {
+      "name": "SiteInspire",
+      "url": "https://www.siteinspire.com/",
+      "note": "按行业和风格双维度筛，适合找对标"
+    }
+  ]
+}
