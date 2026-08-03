@@ -476,6 +476,7 @@
         </div>
         <div class="top-links">
           <a href="#today">今日一站</a>
+          <a href="#chain">打卡</a>
           <a href="#picks">置顶精华</a>
           <a href="#browse">全部档案</a>
           <a href="#timeline">按日期</a>
@@ -484,41 +485,43 @@
       </header>
 
       <section class="section" id="today">
-        <div class="today">
-          <div class="today-card">
-            <div class="today-label" id="today-date">Today</div>
-            <a class="today-name" id="today-name" href="#" target="_blank" rel="noreferrer">加载中</a>
-            <div class="today-url" id="today-url"></div>
-            <p class="today-note" id="today-note"></p>
-            <div class="today-actions">
-              <a class="btn" id="today-visit" href="#" target="_blank" rel="noreferrer">打开看看</a>
-              <button class="btn ghost" id="today-mark">看过了，点亮</button>
-              <button class="btn ghost" id="today-shuffle">换一个</button>
+        <div class="today-card">
+          <div class="today-label" id="today-date">Today</div>
+          <a class="today-name" id="today-name" href="#" target="_blank" rel="noreferrer">加载中</a>
+          <div class="today-url" id="today-url"></div>
+          <p class="today-note" id="today-note"></p>
+          <div class="today-actions">
+            <a class="btn" id="today-visit" href="#" target="_blank" rel="noreferrer">打开看看</a>
+            <button class="btn ghost" id="today-mark">看过了，点亮</button>
+            <button class="btn ghost" id="today-shuffle">换一个</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="chain">
+        <h2>别断链 · 打卡</h2>
+        <p class="section-note">看完「今日一站」顺手点亮一格。记录只存在你这台浏览器，不上传任何数据。</p>
+        <div class="chain-card">
+          <div class="stats">
+            <div class="stat">
+              <div class="num" id="stat-current">0</div>
+              <div class="label">当前连续</div>
+            </div>
+            <div class="stat">
+              <div class="num gold" id="stat-longest">0</div>
+              <div class="label">最长连续</div>
+            </div>
+            <div class="stat">
+              <div class="num" id="stat-total">0</div>
+              <div class="label">累计天数</div>
             </div>
           </div>
-
-          <div class="chain-card">
-            <div class="stats">
-              <div class="stat">
-                <div class="num" id="stat-current">0</div>
-                <div class="label">当前连续</div>
-              </div>
-              <div class="stat">
-                <div class="num gold" id="stat-longest">0</div>
-                <div class="label">最长连续</div>
-              </div>
-              <div class="stat">
-                <div class="num" id="stat-total">0</div>
-                <div class="label">累计天数</div>
-              </div>
-            </div>
-            <div class="chain-grid" id="chain-grid"></div>
-            <div class="chain-legend">
-              <span><i class="legend-dot" style="background:var(--accent)"></i>已点亮</span>
-              <span><i class="legend-dot" style="background:#ecedf0"></i>断了</span>
-              <span><i class="legend-dot" style="background:#f7f8fa"></i>还没到</span>
-              <span style="margin-left:auto"><a href="#" id="chain-reset" style="color:var(--faint)">清空记录</a></span>
-            </div>
+          <div class="chain-grid" id="chain-grid"></div>
+          <div class="chain-legend">
+            <span><i class="legend-dot" style="background:var(--accent)"></i>已点亮</span>
+            <span><i class="legend-dot" style="background:#ecedf0"></i>断了</span>
+            <span><i class="legend-dot" style="background:#f7f8fa"></i>还没到</span>
+            <span style="margin-left:auto"><a href="#" id="chain-reset" style="color:var(--faint)">清空记录</a></span>
           </div>
         </div>
       </section>
