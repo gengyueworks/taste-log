@@ -5,13 +5,14 @@ candidate-radar.py — 每日 GitHub 推荐 + 候选雷达
 每天（由 .github/workflows/daily-candidates.yml 在 GitHub 服务器上触发）：
 
 1. 【每日推荐 · 必有】从 data/sites.json 按「当天是这一年第几天」挑一个站作为
-   「今日推荐」，开一个 issue 推到 GitHub。完全本地、零外部依赖，永远能跑——
-   这就是「每天到 GitHub 上推荐一次」。最长能连着推 47 天不重样，收录变多后更久。
+   「今日推荐」：开一个 issue 推到 GitHub，同时把这条写进 data/daily-picks.json
+   并 commit 回仓库。完全本地、零外部依赖，永远能跑——这就是「每天到 GitHub 上
+   推荐一次」。最长能连着推 47 天不重样，收录变多后更久。
 2. 【候选雷达 · 附赠】顺手去几个源头站扫一遍外链，当作「新候选」附在 issue 末尾，
    仅供拍板，绝不自动写进 sites.json。
 
 需要环境变量 GITHUB_TOKEN（workflow 自动注入）；本地调试没有 token 时会打印不开 issue。
-同一天重复跑不会刷重复 issue（按日期去重）。
+同一天重复跑不会刷重复 issue、不会重复写记录（按日期去重）。
 """
 import json
 import os
@@ -24,6 +25,7 @@ from datetime import date
 REPO = "gengyueworks/taste-log"
 UA = "Mozilla/5.0 (compatible; taste-log-radar/1.0; +https://github.com/gengyueworks/taste-log)"
 PAGES_URL = "https://gengyueworks.github.io/taste-log/"
+DAILY_LOG_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "daily-picks.json")
 
 SOURCES = {
     "Land-book": "https://land-book.com/websites",
@@ -53,6 +55,33 @@ def cat_zh(data, key):
         if c.get("key") == key:
             return c.get("zh", key)
     return key
+
+
+def load_daily_log():
+    if os.path.exists(DAILY_LOG_PATH):
+        with open(DAILY_LOG_PATH, encoding="utf-8") as f:
+            return json.load(f)
+    return []
+
+
+def append_daily_pick(records, featured, czh, today_str):
+    """把今日推荐追加进 daily-picks.json，按日期去重，返回 (records, changed)。"""
+    if any(r.get("date") == today_str for r in records):
+        return records, False
+    records.append({
+        "date": today_str,
+        "site_id": featured.get("id", ""),
+        "name": featured.get("name", ""),
+        "url": featured.get("url", ""),
+        "category": czh,
+    })
+    return records, True
+
+
+def write_daily_log(records):
+    with open(DAILY_LOG_PATH, "w", encoding="utf-8") as f:
+        json.dump(records, f, ensure_ascii=False, indent=2)
+        f.write("\n")
 
 
 def fetch_links(url):
@@ -115,6 +144,14 @@ def main():
     doy = day_of_year(today)
     featured = sites[doy % len(sites)]
     czh = cat_zh(data, featured.get("category", ""))
+
+    # 每日记录：写进 data/daily-picks.json（workflow 会把它 commit 回仓库）
+    records, changed = append_daily_pick(load_daily_log(), featured, czh, today_str)
+    if changed:
+        write_daily_log(records)
+        print(f"[record] 已写入 data/daily-picks.json（{today_str} · {featured['name']}）")
+    else:
+        print(f"[record] {today_str} 已在 daily-picks.json 中，无需重复写。")
 
     # 附赠：外部候选扫描（best-effort，被挡就跳过）
     existing = set()

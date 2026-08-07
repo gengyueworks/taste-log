@@ -1,0 +1,37 @@
+[
+  {
+    "date": "2026-08-03",
+    "site_id": "itsnicethat",
+    "name": "It's Nice That",
+    "url": "https://www.itsnicethat.com/",
+    "category": "策展与灵感网络"
+  },
+  {
+    "date": "2026-08-04",
+    "site_id": "apple",
+    "name": "Apple",
+    "url": "https://www.apple.com/",
+    "category": "产品与工具界面"
+  },
+  {
+    "date": "2026-08-05",
+    "site_id": "framer",
+    "name": "Framer",
+    "url": "https://www.framer.com/",
+    "category": "产品与工具界面"
+  },
+  {
+    "date": "2026-08-06",
+    "site_id": "curvit",
+    "name": "Curvit",
+    "url": "https://curvit.me/",
+    "category": "个人主页与作品集"
+  },
+  {
+    "date": "2026-08-07",
+    "site_id": "perplexity",
+    "name": "Perplexity",
+    "url": "https://www.perplexity.ai/",
+    "category": "产品与工具界面"
+  }
+]
