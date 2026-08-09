@@ -420,6 +420,15 @@
       "category": "curation",
       "tag": "播客 / 专题索引",
       "note": "品牌蓝 #1EBBF0 只出现在 Logo、链接、导航和少量强调位，不铺满。AI Stories 页是很轻的索引：白底、细边框、轻微斑马纹，标题和日期并列，信息密度高但不压迫。文章多了以后做专题页可以照这个来。"
+    },
+    {
+      "id": "acquired-transcript",
+      "name": "Acquired · Transcript",
+      "url": "https://www.acquired.fm/episodes/oprah-harpo-studios#transcript",
+      "date": "2026-08-10",
+      "category": "longform",
+      "tag": "播客逐字稿 / 长访谈",
+      "note": "播客逐字稿页面的阅读解法。正文收成约 36rem 的窄栏 + 宽松行距（leading-120）+ 衬线标题，几万字的访谈稿读起来不累。逐字稿直接锚在节目页内（#transcript），从听切到读不用换页面；说话人名字在行首标识，扫一眼知道轮到谁。适合长访谈、对谈类内容排版——长稿的舒适感来自栏宽和行距，不是字体花样。"
     }
   ],
   "sources": [
