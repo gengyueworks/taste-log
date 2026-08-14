@@ -75,5 +75,12 @@
     "name": "Cursor",
     "url": "https://cursor.com/",
     "category": "产品与工具界面"
+  },
+  {
+    "date": "2026-08-14",
+    "site_id": "vercel",
+    "name": "Vercel",
+    "url": "https://vercel.com/",
+    "category": "产品与工具界面"
   }
 ]
