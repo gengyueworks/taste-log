@@ -89,5 +89,12 @@
     "name": "Granola",
     "url": "https://www.granola.ai/",
     "category": "产品与工具界面"
+  },
+  {
+    "date": "2026-08-16",
+    "site_id": "warp",
+    "name": "Warp",
+    "url": "https://www.warp.dev/",
+    "category": "产品与工具界面"
   }
 ]
