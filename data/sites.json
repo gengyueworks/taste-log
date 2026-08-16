@@ -429,6 +429,15 @@
       "category": "longform",
       "tag": "播客逐字稿 / 长访谈",
       "note": "播客逐字稿页面的阅读解法。正文收成约 36rem 的窄栏 + 宽松行距（leading-120）+ 衬线标题，几万字的访谈稿读起来不累。逐字稿直接锚在节目页内（#transcript），从听切到读不用换页面；说话人名字在行首标识，扫一眼知道轮到谁。适合长访谈、对谈类内容排版——长稿的舒适感来自栏宽和行距，不是字体花样。"
+    },
+    {
+      "id": "variant",
+      "name": "Variant",
+      "url": "https://variant.com",
+      "date": "2026-08-16",
+      "category": "curation",
+      "tag": "AI 生成 UI / 灵感社区",
+      "note": "AI 生成 UI 的灵感社区，被叫「AI 时代的 Pinterest」不夸张。它不让你描述需求，而是直接给你 endless designs 让你 scroll——首页那句「Most tools make you explain what you want. Variant just shows you.」就是它的核心判断。真正值钱的是 community 里各国设计师用天马行空 prompt 攒出来的排版和界面，一种「视觉按摩」。更深一层：它在对抗 LLM 带来的审美均质化（「AI 味」），当模型能力边际递减，审美的独特性成了创作者的最后壁垒，而这里把 prompt 本身变成了审美客体。适合做 UI/排版卡壳时去洗眼、看全球审美差异。"
     }
   ],
   "sources": [
