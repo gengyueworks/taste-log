@@ -96,5 +96,12 @@
     "name": "Warp",
     "url": "https://www.warp.dev/",
     "category": "产品与工具界面"
+  },
+  {
+    "date": "2026-08-17",
+    "site_id": "cursor",
+    "name": "Cursor",
+    "url": "https://cursor.com/",
+    "category": "产品与工具界面"
   }
 ]
