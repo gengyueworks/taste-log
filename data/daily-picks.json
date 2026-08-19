@@ -110,5 +110,12 @@
     "name": "Vercel",
     "url": "https://vercel.com/",
     "category": "产品与工具界面"
+  },
+  {
+    "date": "2026-08-19",
+    "site_id": "granola",
+    "name": "Granola",
+    "url": "https://www.granola.ai/",
+    "category": "产品与工具界面"
   }
 ]
