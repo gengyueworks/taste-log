@@ -117,6 +117,18 @@
         color: var(--accent);
       }
 
+      .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
       .section {
         margin-top: 28px;
         padding: 24px;
@@ -195,6 +207,47 @@
         display: flex;
         gap: 10px;
         flex-wrap: wrap;
+      }
+
+      .history-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 10px;
+      }
+
+      .history-item {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 4px 12px;
+        padding: 14px 16px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius-md);
+        background: #fff;
+      }
+
+      .history-date {
+        grid-row: span 2;
+        color: var(--faint);
+        font-size: 0.8rem;
+        line-height: 1.5;
+      }
+
+      .history-item a {
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .history-item a:hover { color: var(--accent); }
+
+      .history-meta {
+        color: var(--muted);
+        font-size: 0.8rem;
+      }
+
+      .empty-state {
+        margin: 0;
+        color: var(--faint);
+        font-size: 0.9rem;
       }
 
       .btn {
@@ -393,6 +446,40 @@
         margin-bottom: 18px;
       }
 
+      .browse-tools {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 14px;
+      }
+
+      .search-box {
+        flex: 1;
+      }
+
+      #site-search {
+        width: 100%;
+        min-height: 42px;
+        padding: 0 14px;
+        border: 1px solid var(--line-strong);
+        border-radius: 999px;
+        color: var(--ink);
+        background: #fff;
+        font: inherit;
+        outline: none;
+      }
+
+      #site-search:focus {
+        border-color: var(--accent);
+        box-shadow: 0 0 0 3px var(--accent-soft);
+      }
+
+      .search-result-count {
+        flex: none;
+        color: var(--faint);
+        font-size: 0.82rem;
+      }
+
       .filter {
         padding: 8px 14px;
         border: 1px solid var(--line);
@@ -457,6 +544,8 @@
         .shell { width: min(100% - 24px, 1180px); margin-top: 20px; }
         .hero, .section { padding: 20px; }
         .today-card, .chain-card { padding: 18px; }
+        .browse-tools { align-items: stretch; flex-direction: column; }
+        .search-result-count { padding-left: 4px; }
       }
     </style>
   </head>
@@ -471,11 +560,12 @@
         </p>
         <div class="hero-meta">
           <span class="chip" id="chip-count">— 个站点</span>
-          <span class="chip">开始于 2026-03-17</span>
+          <span class="chip" id="chip-start">持续更新中</span>
           <span class="chip">CC BY 4.0</span>
         </div>
         <div class="top-links">
           <a href="#today">今日一站</a>
+          <a href="#history">推荐历史</a>
           <a href="#chain">打卡</a>
           <a href="#picks">置顶精华</a>
           <a href="#browse">全部档案</a>
@@ -496,6 +586,12 @@
             <button class="btn ghost" id="today-shuffle">换一个</button>
           </div>
         </div>
+      </section>
+
+      <section class="section" id="history">
+        <h2>推荐历史</h2>
+        <p class="section-note">每天自动挑选一个站点，最近的记录会留在这里。</p>
+        <div class="history-list" id="daily-history"></div>
       </section>
 
       <section class="section" id="chain">
@@ -535,6 +631,13 @@
       <section class="section" id="browse">
         <h2>全部档案</h2>
         <p class="section-note">按分类筛。带「为什么好看」的条目可以展开。</p>
+        <div class="browse-tools">
+          <label class="search-box">
+            <span class="visually-hidden">搜索档案</span>
+            <input id="site-search" type="search" placeholder="搜索站名、标签或判断……" autocomplete="off" />
+          </label>
+          <span class="search-result-count" id="search-result-count" aria-live="polite"></span>
+        </div>
         <div class="filters" id="filters"></div>
         <div class="grid" id="grid-all"></div>
       </section>
@@ -561,39 +664,85 @@
       const STORE_KEY = "taste-log-chain-v1";
       const YEAR = new Date().getFullYear();
       let DATA = null;
-      let todaySite = null;
       let activeFilter = "all";
+      let searchQuery = "";
 
       const pad = (n) => String(n).padStart(2, "0");
       const key = (d) => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
       const todayKey = key(new Date());
 
       const loadChain = () => {
-        try { return JSON.parse(localStorage.getItem(STORE_KEY)) || {}; }
-        catch (e) { return {}; }
+        try {
+          const stored = JSON.parse(localStorage.getItem(STORE_KEY));
+          return stored && typeof stored === "object" && !Array.isArray(stored) ? stored : {};
+        } catch (e) {
+          return {};
+        }
       };
-      const saveChain = (c) => localStorage.setItem(STORE_KEY, JSON.stringify(c));
+      const saveChain = (c) => {
+        try {
+          localStorage.setItem(STORE_KEY, JSON.stringify(c));
+          return true;
+        } catch (e) {
+          return false;
+        }
+      };
+
+      function escapeHTML(value) {
+        return String(value ?? "").replace(/[&<>\'\"]/g, (char) => ({
+          "&": "&amp;",
+          "<": "&lt;",
+          ">": "&gt;",
+          "'": "&#39;",
+          '"': "&quot;",
+        }[char]));
+      }
+
+      function safeURL(value) {
+        if (typeof value !== "string" || !value.trim()) return "#";
+        try {
+          const url = new URL(value, window.location.href);
+          return ["http:", "https:"].includes(url.protocol) ? url.href : "#";
+        } catch (e) {
+          return "#";
+        }
+      }
+
+      function validDateKey(value) {
+        return /^\d{4}-\d{2}-\d{2}$/.test(value) && !Number.isNaN(new Date(`${value}T00:00:00`).getTime());
+      }
 
       function dayOfYear(d) {
-        const start = new Date(d.getFullYear(), 0, 0);
-        return Math.floor((d - start) / 86400000);
+        const start = Date.UTC(d.getFullYear(), 0, 1);
+        const current = Date.UTC(d.getFullYear(), d.getMonth(), d.getDate());
+        return Math.floor((current - start) / 86400000) + 1;
       }
 
       function pickToday(sites, offset) {
+        if (!sites.length) return null;
         const seed = dayOfYear(new Date()) + (offset || 0);
         return sites[seed % sites.length];
       }
 
       function renderToday(site) {
-        todaySite = site;
         document.getElementById("today-date").textContent = todayKey + " · 今日一站";
         const nameEl = document.getElementById("today-name");
+        if (!site) {
+          nameEl.textContent = "档案暂时为空";
+          nameEl.removeAttribute("href");
+          document.getElementById("today-url").textContent = "";
+          document.getElementById("today-note").textContent = "先在 data/sites.json 添加一条记录，再回来使用今日推荐。";
+          document.getElementById("today-visit").removeAttribute("href");
+          document.getElementById("today-mark").disabled = true;
+          return;
+        }
+        document.getElementById("today-mark").disabled = false;
         nameEl.textContent = site.name;
-        nameEl.href = site.url;
+        nameEl.href = safeURL(site.url);
         document.getElementById("today-url").textContent = site.url.replace(/^https?:\/\//, "").replace(/\/$/, "");
         document.getElementById("today-note").textContent =
           site.note || "还没写判断。打开看完，如果觉得好，补一句它好在哪 —— 这一条就成立了。";
-        document.getElementById("today-visit").href = site.url;
+        document.getElementById("today-visit").href = safeURL(site.url);
         syncMarkButton();
       }
 
@@ -632,7 +781,7 @@
         }
         grid.innerHTML = html;
 
-        const keys = Object.keys(chain).filter((k) => chain[k]).sort();
+        const keys = Object.keys(chain).filter((k) => chain[k] && validDateKey(k)).sort();
         document.getElementById("stat-total").textContent = keys.length;
 
         let longest = 0, run = 0, prev = null;
@@ -656,12 +805,15 @@
       }
 
       function cardHTML(s) {
+        const url = escapeHTML(safeURL(s.url));
+        const name = escapeHTML(s.name || "未命名站点");
+        const tag = escapeHTML(s.tag || "");
         const note = s.note
-          ? `<details><summary></summary><p>${s.note}</p></details>`
+          ? `<details><summary></summary><p>${escapeHTML(s.note)}</p></details>`
           : "";
         return `<article class="card">
-          <a href="${s.url}" target="_blank" rel="noreferrer">${s.name}</a>
-          <span class="tag">${s.tag || ""}</span>
+          <a href="${url}" target="_blank" rel="noopener noreferrer">${name}</a>
+          <span class="tag">${tag}</span>
           ${note}
         </article>`;
       }
@@ -676,7 +828,7 @@
         DATA.sites.forEach((s) => { counts[s.category] = (counts[s.category] || 0) + 1; });
         const cats = DATA.categories.filter((c) => counts[c.key]);
         const btns = [`<button class="filter active" data-cat="all">全部 ${DATA.sites.length}</button>`]
-          .concat(cats.map((c) => `<button class="filter" data-cat="${c.key}">${c.zh} ${counts[c.key]}</button>`));
+          .concat(cats.map((c) => `<button class="filter" data-cat="${escapeHTML(c.key)}">${escapeHTML(c.zh)} ${counts[c.key]}</button>`));
         const box = document.getElementById("filters");
         box.innerHTML = btns.join("");
         box.querySelectorAll(".filter").forEach((b) => {
@@ -690,10 +842,24 @@
       }
 
       function renderAll() {
-        const list = activeFilter === "all"
+        const categoryList = activeFilter === "all"
           ? DATA.sites
           : DATA.sites.filter((s) => s.category === activeFilter);
-        document.getElementById("grid-all").innerHTML = list.map(cardHTML).join("");
+        const query = searchQuery.trim().toLocaleLowerCase();
+        const list = categoryList.filter((s) => {
+          if (!query) return true;
+          const categoryName = DATA.categories.find((category) => category.key === s.category)?.zh;
+          return [s.name, s.tag, s.note, s.category, categoryName]
+            .filter(Boolean)
+            .join(" ")
+            .toLocaleLowerCase()
+            .includes(query);
+        });
+        document.getElementById("grid-all").innerHTML = list.length
+          ? list.map(cardHTML).join("")
+          : '<p class="empty-state">没有找到匹配的档案。换个关键词，或清空搜索条件。</p>';
+        document.getElementById("search-result-count").textContent =
+          query || activeFilter !== "all" ? `显示 ${list.length} / ${DATA.sites.length}` : `${list.length} 个站点`;
       }
 
       function renderTimeline() {
@@ -712,16 +878,31 @@
       function renderSources() {
         document.getElementById("source-list").innerHTML = DATA.sources.map((s) => `
           <article class="source-item">
-            <a href="${s.url}" target="_blank" rel="noreferrer">${s.name}</a>
-            <p>${s.note}</p>
+            <a href="${escapeHTML(safeURL(s.url))}" target="_blank" rel="noopener noreferrer">${escapeHTML(s.name)}</a>
+            <p>${escapeHTML(s.note)}</p>
           </article>`).join("");
+      }
+
+      function renderHistory() {
+        const picks = (DATA.dailyPicks || [])
+          .filter((pick) => pick && validDateKey(pick.date))
+          .sort((a, b) => b.date.localeCompare(a.date));
+        const history = picks.slice(0, 12);
+        document.getElementById("daily-history").innerHTML = history.length
+          ? history.map((pick) => `
+            <article class="history-item">
+              <time class="history-date" datetime="${escapeHTML(pick.date)}">${escapeHTML(pick.date)}</time>
+              <a href="${escapeHTML(safeURL(pick.url))}" target="_blank" rel="noopener noreferrer">${escapeHTML(pick.name)}</a>
+              <span class="history-meta">${escapeHTML(pick.category || "未分类")}</span>
+            </article>`).join("")
+          : '<p class="empty-state">每日推荐记录还没有生成。</p>';
       }
 
       document.getElementById("today-mark").addEventListener("click", () => {
         const chain = loadChain();
         if (chain[todayKey]) return;
         chain[todayKey] = true;
-        saveChain(chain);
+        if (!saveChain(chain)) return;
         syncMarkButton();
         renderChain();
       });
@@ -735,18 +916,35 @@
       document.getElementById("chain-reset").addEventListener("click", (e) => {
         e.preventDefault();
         if (confirm("清空全年打卡记录？不可恢复。")) {
-          localStorage.removeItem(STORE_KEY);
+          try { localStorage.removeItem(STORE_KEY); } catch (error) { return; }
           syncMarkButton();
           renderChain();
         }
       });
 
-      fetch("data/sites.json")
-        .then((r) => r.json())
-        .then((d) => {
+      document.getElementById("site-search").addEventListener("input", (event) => {
+        searchQuery = event.target.value;
+        renderAll();
+      });
+
+      const sitesPromise = fetch("data/sites.json")
+        .then((r) => {
+          if (!r.ok) throw new Error(`sites.json: ${r.status}`);
+          return r.json();
+        });
+      const dailyPicksPromise = fetch("data/daily-picks.json")
+        .then((r) => r.ok ? r.json() : [])
+        .catch(() => []);
+
+      Promise.all([sitesPromise, dailyPicksPromise])
+        .then(([d, dailyPicks]) => {
           DATA = d;
+          DATA.dailyPicks = Array.isArray(dailyPicks) ? dailyPicks : [];
           document.getElementById("chip-count").textContent = `${d.sites.length} 个站点`;
+          const startDate = d.sites.map((site) => site.date).filter(Boolean).sort()[0];
+          document.getElementById("chip-start").textContent = startDate ? `开始于 ${startDate}` : "持续更新中";
           renderToday(pickToday(d.sites, 0));
+          renderHistory();
           renderChain();
           renderPicks();
           renderFilters();
@@ -758,6 +956,7 @@
           document.getElementById("today-name").textContent = "数据加载失败";
           document.getElementById("today-note").textContent =
             "本地直接双击打开 index.html 时浏览器会拦截 fetch。用 python3 -m http.server 起个本地服务，或者直接看线上版本。";
+          document.getElementById("daily-history").innerHTML = '<p class="empty-state">推荐历史暂时无法加载。</p>';
         });
     </script>
   </body>

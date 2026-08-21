@@ -7,7 +7,7 @@ candidate-radar.py — 每日 GitHub 推荐 + 候选雷达
 1. 【每日推荐 · 必有】从 data/sites.json 按「当天是这一年第几天」挑一个站作为
    「今日推荐」：开一个 issue 推到 GitHub，同时把这条写进 data/daily-picks.json
    并 commit 回仓库。完全本地、零外部依赖，永远能跑——这就是「每天到 GitHub 上
-   推荐一次」。最长能连着推 47 天不重样，收录变多后更久。
+   推荐一次」。连续不重样的天数由当前主库条目数决定。
 2. 【候选雷达 · 附赠】顺手去几个源头站扫一遍外链，当作「新候选」附在 issue 末尾，
    仅供拍板，绝不自动写进 sites.json。
 
@@ -47,7 +47,10 @@ def day_of_year(d):
 def load_sites():
     path = os.path.join(os.path.dirname(__file__), "..", "data", "sites.json")
     with open(path, encoding="utf-8") as f:
-        return json.load(f)
+        data = json.load(f)
+    if not isinstance(data, dict) or not isinstance(data.get("sites"), list):
+        raise ValueError("data/sites.json 必须包含 sites 数组")
+    return data
 
 
 def cat_zh(data, key):
@@ -76,6 +79,13 @@ def append_daily_pick(records, featured, czh, today_str):
         "category": czh,
     })
     return records, True
+
+
+def select_featured(sites, target_date):
+    """按年内日期稳定选择一个站点，空库直接给出可读错误。"""
+    if not sites:
+        raise ValueError("data/sites.json 没有可推荐的站点")
+    return sites[day_of_year(target_date) % len(sites)]
 
 
 def write_daily_log(records):
@@ -131,8 +141,8 @@ def issue_exists_today(token, today_str):
     try:
         with urllib.request.urlopen(req, timeout=30) as resp:
             issues = json.loads(resp.read())
-    except Exception:
-        return False
+    except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError) as exc:
+        raise RuntimeError("无法确认今日 issue 是否已存在，已停止发布以避免重复") from exc
     return any(today_str in (i.get("title") or "") for i in issues)
 
 
@@ -141,8 +151,7 @@ def main():
     sites = data.get("sites", [])
     today = date.today()
     today_str = today.isoformat()
-    doy = day_of_year(today)
-    featured = sites[doy % len(sites)]
+    featured = select_featured(sites, today)
     czh = cat_zh(data, featured.get("category", ""))
 
     # 每日记录：写进 data/daily-picks.json（workflow 会把它 commit 回仓库）
