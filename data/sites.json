@@ -460,6 +460,11 @@
       "name": "SiteInspire",
       "url": "https://www.siteinspire.com/",
       "note": "按行业和风格双维度筛，适合找对标"
+    },
+    {
+      "name": "getdesign.md",
+      "url": "https://getdesign.md/design-md",
+      "note": "DESIGN.md 目录库：把知名网站的设计系统拆成 AI 能直接读的 markdown，丢进项目根目录，agent 出的每个页面都沿用同一套视觉语言。开源版在 github.com/VoltAgent/awesome-design-md（MIT），用法见 docs/design-md-guide.md"
     }
   ]
 }
