@@ -1,34 +1,41 @@
 # Taste Log · 一份有判断的网页审美档案
 
-> 我收藏过很多好看的网站。收藏夹里躺着几百个链接，真到要做页面的时候，一个都想不起来。就算翻到了，也只剩一个域名——当时到底是被哪一块打动的，早忘干净了。
->
-> 2026 年 3 月我开始认真做这件事：每天挑几个站，不光存链接，还写清楚为什么好看、适合什么内容、哪个细节以后能拿走用。攒了 47 个站，还整理出一套自己的判断标准。做到第 10 天，断了。
->
-> 断掉的原因不是内容不好，是没有每天回来的理由。库藏在硬盘里，不打开就等于不存在。所以这次我把 Seinfeld 的「别断链」打卡法直接焊进首页——每天推一个站，看完点亮一格，断了自己看得见。链接谁都能列，值钱的是判断；判断谁都能写，难的是坚持写。
+Taste Log 把网页灵感整理成可以再次调用的判断：每条记录包含站点、分类、收录日期、标签，以及「为什么好看」「适合什么场景」「哪个细节值得借鉴」。
 
-[English version ↓](#english)
+它适合三种时刻：每天花两分钟看一个站，做页面前按分类找参考，或者沿着一条具体的设计判断继续深挖。
 
-**[打开档案 →](https://gengyueworks.github.io/taste-log/)**
+**[打开在线档案 →](https://gengyueworks.github.io/taste-log/)**
 
----
+## 先从这里开始
 
-## 这是什么
+1. 打开[在线档案](https://gengyueworks.github.io/taste-log/)，先看「今日一站」。
+2. 点开原站，回到档案后点亮当天的打卡格。
+3. 做页面时，在「全部档案」里按分类或关键词搜索。
+4. 想找可迁移的细节，继续读[审美卡档案](docs/aesthetic-cards.md)。
 
-一份网页设计的策展档案。和普通的「设计灵感网站合集」有三点不一样：
+打卡记录只保存在当前浏览器的 `localStorage`，不会上传。每日推荐会由 GitHub Actions 生成 issue，并追加到 `data/daily-picks.json`。
 
-**一、每条都有判断，不只有链接。** 收录标准是能回答「你具体喜欢哪一块」。写不出来的，说明还没看懂，先不收。
+## 内容结构
 
-**二、中文语境的设计判断。** Awwwards、Land-book、Godly 这些站都很好，但它们给的是图。「为什么这个留白舒服」「这个蓝为什么只能出现在这几个位置」——这层中文圈基本没人写。
+| 入口 | 用途 |
+| --- | --- |
+| 在线首页 | 今日推荐、全年打卡、搜索、分类筛选、时间线和推荐历史 |
+| `data/sites.json` | 站点档案的主数据 |
+| `data/daily-picks.json` | 每日推荐的历史记录 |
+| `docs/aesthetic-cards.md` | 从具体页面细节提炼出的审美卡片 |
+| `docs/criteria.md` | 站点进入主库前要满足的收录标准 |
+| `docs/preferences.md` | 个人审美偏好与判断维度 |
 
-**三、带机制，不只是内容。** 站点里内置一个全年打卡格子（在「今日一站」下方），看完点亮一格；另外每天会在 GitHub 上发一条「今日推荐」issue，并把它写进仓库的 `data/daily-picks.json` 提交一次，推一个站给你。这套机制就是这个库上次死掉的反面——没有每天回来的理由，库就等于不存在。
+## 这份档案的判断方式
 
-## 怎么用
+每条记录尽量回答四个问题：
 
-- **每天 GitHub 上会多一条「今日推荐」**：自动发的，点开看一眼，顺手去站点点亮打卡格。当天推荐会 commit 进仓库 `data/daily-picks.json`，主页 commit 记录每天可见。
-- **每天两分钟**：打开首页，看「今日一站」，点开原站扫一眼，回来点亮。
-- **做页面时**：按分类筛（长文阅读页 / 产品界面 / 字体工作室 / 交互动效 / 品牌识别……），找对标。
-- **做页面需要细节参考时**：读 [审美卡档案](docs/aesthetic-cards.md)——一卡一判断，每条有「喜欢哪一块」和「能拿走」，截图在本地，正文给出完整路径。
-- **想深挖**：读 [收录标准](docs/criteria.md) 和 [审美判断体系](docs/preferences.md)。
+1. 第一眼读到的气质是什么？
+2. 哪个结构、节奏或交互决定了这种气质？
+3. 它适合什么类型的内容或产品？
+4. 哪个具体细节值得借鉴到自己的页面？
+
+形容词可以作为入口，具体决策才是记录的核心。完整标准见[收录标准](docs/criteria.md)，判断维度见[审美判断体系](docs/preferences.md)。
 
 ## 里面有什么
 
@@ -44,51 +51,28 @@
 
 ## 收录标准
 
-一个站至少满足下面三条中的三条才收（是的，三条全要）：
+一个站需要同时满足以下三点：
 
-1. 第一屏能说出明确的气质判断
-2. 结构和节奏足够成熟，不是靠单点效果撑
-3. 有能拿走用的东西——某个模块、某种节奏、某个决策
+1. 第一屏能支持清楚的气质判断。
+2. 信息层级、结构和节奏整体成立。
+3. 至少有一个模块、节奏、文案或交互决策可以迁移。
 
-**明确不收：**
+以下情况暂不进入主库：链接失效、只有单点效果、结构与内容无法支撑视觉表现、或暂时说不清具体喜欢哪一块。
 
-- 只靠流行渐变和 3D 插画撑起来的
-- 只有热闹动效、没有结构判断的
-- 标准 SaaS 模板脸
-- 链接打不开的（设计再好也按无效处理）
+## 提交一个候选站点
 
-完整标准见 [docs/criteria.md](docs/criteria.md)。
+请[新建 issue](https://github.com/gengyueworks/taste-log/issues/new)，提供下面四项信息：
 
-## 一条记录长什么样
-
-不是这样：
-
-> Kinfolk — 生活方式杂志，很好看。
-
-是这样：
-
-> **Kinfolk** · 杂志刊物感 · 精华
-> 主站气质的母本。图片、文字、留白之间的关系是被编辑过的，不是排出来的。生活世界感来自内容本身，不靠滤镜和字体撑。
-
-再比如：
-
-> **Machines of Loving Grace** · 长文阅读页
-> 目录跟着阅读状态走，但存在感压得很低——像安静地陪读，不是不断打断。这类页面的设计目标不是展示花样，是保护注意力。适合 manifesto、作者观点页、需要建立信任感的深度内容。
-
-## 参与
-
-看到该收的站，[开个 issue](https://github.com/gengyueworks/taste-log/issues/new)，按这个格式：
-
-```
+```text
 站点：https://example.com
 分类：产品与工具界面
-喜欢哪一块：（一句话，要具体。「很高级」这种不算）
-能拿走什么：（可选）
+喜欢哪一块：一句具体判断，写清楚位置、动作或节奏
+能拿走什么：可选，写一个可迁移的模块或决策
 ```
 
-只有链接、说不出喜欢哪一块的，会先放着不收。这不是挑剔，是这个库唯一的护城河。
+一句「很高级」无法帮助维护者判断。可以描述首屏的信息量、滚动节奏、导航存在感、文字与图片的关系，或者某个交互如何服务内容。
 
-详见 [CONTRIBUTING.md](CONTRIBUTING.md)。
+详细格式见[贡献指南](CONTRIBUTING.md)。
 
 ## 本地运行
 
@@ -96,40 +80,65 @@
 git clone https://github.com/gengyueworks/taste-log.git
 cd taste-log
 python3 -m http.server 8000
-# 打开 http://localhost:8000
 ```
 
-直接双击 `index.html` 会因为浏览器 CORS 策略读不到 `data/sites.json`，得起个本地服务。
+然后打开 <http://localhost:8000>。首页通过 `fetch` 读取 `data/sites.json`，直接双击 `index.html` 时浏览器会拦截本地文件请求。
+
+## 项目结构
+
+```text
+.
+├── index.html                    # 在线档案首页
+├── data/
+│   ├── sites.json                # 站点主数据
+│   └── daily-picks.json          # 每日推荐历史
+├── docs/
+│   ├── aesthetic-cards.md        # 审美卡档案
+│   ├── criteria.md               # 收录标准
+│   └── preferences.md            # 审美判断体系
+├── scripts/
+│   ├── candidate-radar.py        # 每日推荐与候选扫描
+│   └── test_taste_log.py         # 无网络单元测试
+└── .github/workflows/
+    └── daily-candidates.yml     # 每日自动任务
+```
+
+## 自动化
+
+`.github/workflows/daily-candidates.yml` 每天按北京时间 09:30 运行：
+
+- 从主库挑选当天推荐；
+- 发布带 `daily-pick` 标签的 GitHub issue；
+- 把推荐追加到 `data/daily-picks.json`；
+- 提交并推送当天的数据变化；
+- 从几个灵感源头扫描候选链接，候选只进入 issue，等待人工判断。
+
+本地运行脚本时，如果没有 `GITHUB_TOKEN`，脚本会生成推荐内容并打印，不会创建 issue。
 
 ## 授权
 
-内容采用 [CC BY 4.0](LICENSE)。随便拿去用、改、商用，署名就行。
-
-收录的网站链接和站名属于各自所有者，本库只做索引和评述，不存任何截图或素材。
+正文、判断和代码按 [CC BY 4.0](LICENSE) 授权，使用时请保留署名。收录站点的名称和链接归各自所有者所有；本项目只做索引与评述，不保存站点截图或素材。
 
 ---
 
 <a name="english"></a>
 
-# Taste Log · A curated archive of web design, with opinions
+# Taste Log · A web-design archive with a point of view
 
-> I've bookmarked hundreds of beautiful websites. When it's actually time to design a page, I can't recall a single one. And even when I dig one up, all that's left is a domain name — whatever it was that struck me back then is long gone.
->
-> In March 2026 I started doing this properly: pick a few sites each day, and instead of just saving the link, write down why it works, what kind of content it suits, and which detail is worth stealing later. I got to 47 sites and a working set of criteria. On day ten, it died.
->
-> It didn't die because the content was bad. It died because there was no reason to come back. A library buried on a hard drive doesn't exist. So this time I welded Seinfeld's "don't break the chain" straight into the homepage — one site a day, mark it when you've looked, and a broken streak is impossible to ignore. Anyone can list links. The judgment is the value. Writing the judgment is easy; keeping it up is the hard part.
+Taste Log turns web references into reusable design judgment. Each entry keeps the site, category, date, tags, a reason it works, the context it fits, and a detail worth borrowing.
 
-**[Open the archive →](https://gengyueworks.github.io/taste-log/)**
+Use it in three ways: look at one site a day, search the archive before designing a page, or follow a specific design decision into the deeper notes.
 
-## What this is
+**[Open the online archive →](https://gengyueworks.github.io/taste-log/)**
 
-A curated archive of web design. Three things make it different from a typical "design inspiration" list:
+## Start here
 
-**1. Every entry carries a judgment, not just a URL.** The bar for inclusion is being able to answer "which specific part do you like?" If I can't articulate it, I haven't understood it yet — so it doesn't go in.
+1. Open the [online archive](https://gengyueworks.github.io/taste-log/) and read the site of the day.
+2. Visit the original site, then return and mark the day complete.
+3. Search the archive by category, name, tag, or design note.
+4. Read the [Aesthetic Cards](docs/aesthetic-cards.md) when you need a transferable detail.
 
-**2. Design criticism in Chinese.** Awwwards, Land-book and Godly are great, but they give you images. *Why* this whitespace feels right, *why* that blue only works in three specific places — almost nobody writes this layer in Chinese.
-
-**3. It ships with a mechanism, not just content.** The homepage has a full-year grid. One site per day, mark it when you've looked. That's not a gimmick — the lack of it is exactly what killed this project the first time.
+The streak lives in the current browser's `localStorage`; no data is uploaded. GitHub Actions publishes a daily recommendation issue and appends the record to `data/daily-picks.json`.
 
 ## What's inside
 
@@ -139,22 +148,57 @@ A curated archive of web design. Three things make it different from a typical "
 - **4 pinned picks** — Kinfolk, Craft, Land-book, Linear
 - **A streak grid** — 365 cells, stored in localStorage, nothing uploaded
 
-## Inclusion criteria
+| Entry point | Use it for |
+| --- | --- |
+| Online homepage | Daily pick, yearly streak, search, filters, timeline, and recommendation history |
+| `data/sites.json` | Source of truth for the site archive |
+| `data/daily-picks.json` | History of daily recommendations |
+| `docs/aesthetic-cards.md` | Specific visual and interaction observations |
+| `docs/criteria.md` | Inclusion bar for the main archive |
+| `docs/preferences.md` | Personal taste and judgment dimensions |
 
-A site must meet all three:
+## How entries are judged
 
-1. The first screen supports a clear read on its character
-2. Structure and pacing are mature — not carried by one trick
-3. Something is transferable: a module, a rhythm, a decision
+Each entry should answer four questions:
 
-**Automatic no:** trend gradients and 3D illustrations doing all the work; motion without structural thinking; generic SaaS template face; dead links (a great design behind a broken URL counts as invalid).
+1. What character does the first screen establish?
+2. Which structure, rhythm, or interaction creates it?
+3. What kind of content or product does it suit?
+4. Which concrete detail could transfer to another page?
 
-## Contributing
+Descriptors are a starting point. Concrete decisions are the archive's core. See the [inclusion criteria](docs/criteria.md) and the [taste system](docs/preferences.md) for the full method.
 
-Open an [issue](https://github.com/gengyueworks/taste-log/issues/new) with the site URL, a category, and — required — one specific sentence on which part you like. "Looks premium" doesn't count. That specificity is the only moat this archive has.
+## Contribute a site
+
+Open a [new issue](https://github.com/gengyueworks/taste-log/issues/new) with:
+
+```text
+Site: https://example.com
+Category: Product & tool UI
+Which part you like: One specific observation about a location, action, or rhythm
+What's transferable: Optional — a module or decision worth carrying forward
+```
+
+“Looks premium” is too vague to review. Describe the first screen, scroll rhythm, navigation, relationship between type and image, or the way an interaction serves the content.
+
+See [Contributing](CONTRIBUTING.md) for the complete format.
+
+## Run locally
+
+```bash
+git clone https://github.com/gengyueworks/taste-log.git
+cd taste-log
+python3 -m http.server 8000
+```
+
+Open <http://localhost:8000>. The homepage loads `data/sites.json` with `fetch`, so opening `index.html` directly will be blocked by the browser's local-file policy.
+
+## Automation
+
+`.github/workflows/daily-candidates.yml` runs every day at 09:30 China Standard Time. It publishes the daily pick, records it in `data/daily-picks.json`, commits the change, and scans a few inspiration sources for candidates awaiting human review.
+
+Without `GITHUB_TOKEN`, the local script prints the generated recommendation and skips issue creation.
 
 ## License
 
-Content under [CC BY 4.0](LICENSE). Use it, remix it, sell it — just credit.
-
-Linked sites and their names belong to their respective owners. This archive indexes and comments; it stores no screenshots or assets.
+Text, judgment notes, and code are released under [CC BY 4.0](LICENSE). Keep attribution when you use them. Linked sites and their names belong to their respective owners; this project indexes and comments on them without storing screenshots or assets.
