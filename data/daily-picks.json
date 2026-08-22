@@ -131,5 +131,12 @@
     "name": "Superlist",
     "url": "https://superlist.com/",
     "category": "产品与工具界面"
+  },
+  {
+    "date": "2026-08-22",
+    "site_id": "anthropic",
+    "name": "Anthropic",
+    "url": "https://www.anthropic.com/",
+    "category": "品牌识别"
   }
 ]
