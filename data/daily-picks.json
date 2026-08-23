@@ -138,5 +138,12 @@
     "name": "Anthropic",
     "url": "https://www.anthropic.com/",
     "category": "品牌识别"
+  },
+  {
+    "date": "2026-08-23",
+    "site_id": "raycast",
+    "name": "Raycast",
+    "url": "https://www.raycast.com/",
+    "category": "产品与工具界面"
   }
 ]
