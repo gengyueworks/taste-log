@@ -152,5 +152,12 @@
     "name": "Notion",
     "url": "https://www.notion.com/",
     "category": "产品与工具界面"
+  },
+  {
+    "date": "2026-08-25",
+    "site_id": "stripe",
+    "name": "Stripe",
+    "url": "https://stripe.com/",
+    "category": "品牌识别"
   }
 ]
