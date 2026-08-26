@@ -159,5 +159,12 @@
     "name": "Stripe",
     "url": "https://stripe.com/",
     "category": "品牌识别"
+  },
+  {
+    "date": "2026-08-26",
+    "site_id": "pitch",
+    "name": "Pitch",
+    "url": "https://pitch.com/",
+    "category": "产品与工具界面"
   }
 ]
