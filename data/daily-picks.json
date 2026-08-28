@@ -173,5 +173,12 @@
     "name": "Are.na",
     "url": "https://www.are.na/",
     "category": "策展与灵感网络"
+  },
+  {
+    "date": "2026-08-28",
+    "site_id": "dario-amodei",
+    "name": "Machines of Loving Grace",
+    "url": "https://darioamodei.com/essay/machines-of-loving-grace",
+    "category": "长文阅读页"
   }
 ]
