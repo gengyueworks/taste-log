@@ -180,5 +180,12 @@
     "name": "Machines of Loving Grace",
     "url": "https://darioamodei.com/essay/machines-of-loving-grace",
     "category": "长文阅读页"
+  },
+  {
+    "date": "2026-08-29",
+    "site_id": "sam-altman",
+    "name": "Sam Altman Blog",
+    "url": "https://ia.samaltman.com/",
+    "category": "长文阅读页"
   }
 ]
