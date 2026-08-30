@@ -187,5 +187,12 @@
     "name": "Sam Altman Blog",
     "url": "https://ia.samaltman.com/",
     "category": "长文阅读页"
+  },
+  {
+    "date": "2026-08-30",
+    "site_id": "possible-fm",
+    "name": "Possible",
+    "url": "https://www.possible.fm/",
+    "category": "策展与灵感网络"
   }
 ]
