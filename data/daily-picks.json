@@ -194,5 +194,12 @@
     "name": "Possible",
     "url": "https://www.possible.fm/",
     "category": "策展与灵感网络"
+  },
+  {
+    "date": "2026-08-31",
+    "site_id": "acquired-transcript",
+    "name": "Acquired · Transcript",
+    "url": "https://www.acquired.fm/episodes/oprah-harpo-studios#transcript",
+    "category": "长文阅读页"
   }
 ]
