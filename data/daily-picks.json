@@ -215,5 +215,12 @@
     "name": "Kinfolk",
     "url": "https://www.kinfolk.com/",
     "category": "杂志刊物感"
+  },
+  {
+    "date": "2026-09-03",
+    "site_id": "craft",
+    "name": "Craft",
+    "url": "https://www.craft.do/zh-CN",
+    "category": "产品与工具界面"
   }
 ]
