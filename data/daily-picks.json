@@ -229,5 +229,12 @@
     "name": "Land-book",
     "url": "https://land-book.com/",
     "category": "策展与灵感网络"
+  },
+  {
+    "date": "2026-09-05",
+    "site_id": "linear",
+    "name": "Linear",
+    "url": "https://linear.app/",
+    "category": "产品与工具界面"
   }
 ]
