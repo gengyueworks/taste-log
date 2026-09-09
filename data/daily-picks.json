@@ -257,5 +257,12 @@
     "name": "a.Foundry",
     "url": "https://a-foundry.com/",
     "category": "字体工作室"
+  },
+  {
+    "date": "2026-09-09",
+    "site_id": "studio-zosia",
+    "name": "Studio Zosia",
+    "url": "https://studiozosia.com/",
+    "category": "设计工作室"
   }
 ]
