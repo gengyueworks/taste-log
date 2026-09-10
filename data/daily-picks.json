@@ -264,5 +264,12 @@
     "name": "Studio Zosia",
     "url": "https://studiozosia.com/",
     "category": "设计工作室"
+  },
+  {
+    "date": "2026-09-10",
+    "site_id": "underscore",
+    "name": "Underscore",
+    "url": "https://underscoretype.com/",
+    "category": "字体工作室"
   }
 ]
