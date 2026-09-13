@@ -285,5 +285,12 @@
     "name": "AREA 17",
     "url": "https://area17.com/",
     "category": "设计工作室"
+  },
+  {
+    "date": "2026-09-13",
+    "site_id": "locomotive",
+    "name": "Locomotive",
+    "url": "https://www.locomotive.ca/en",
+    "category": "设计工作室"
   }
 ]
