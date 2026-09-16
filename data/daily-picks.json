@@ -306,5 +306,12 @@
     "name": "Diagram",
     "url": "https://diagram.co/",
     "category": "品牌识别"
+  },
+  {
+    "date": "2026-09-16",
+    "site_id": "monotype",
+    "name": "Monotype",
+    "url": "https://www.monotype.com/",
+    "category": "字体工作室"
   }
 ]
