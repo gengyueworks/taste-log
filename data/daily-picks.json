@@ -313,5 +313,12 @@
     "name": "Monotype",
     "url": "https://www.monotype.com/",
     "category": "字体工作室"
+  },
+  {
+    "date": "2026-09-17",
+    "site_id": "lovefrom",
+    "name": "LoveFrom",
+    "url": "https://www.lovefrom.com/",
+    "category": "设计工作室"
   }
 ]
