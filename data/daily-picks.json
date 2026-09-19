@@ -327,5 +327,12 @@
     "name": "Rive",
     "url": "https://rive.app/",
     "category": "交互与动效"
+  },
+  {
+    "date": "2026-09-19",
+    "site_id": "spline",
+    "name": "Spline",
+    "url": "https://spline.design/",
+    "category": "交互与动效"
   }
 ]
