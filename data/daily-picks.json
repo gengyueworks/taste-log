@@ -334,5 +334,12 @@
     "name": "Spline",
     "url": "https://spline.design/",
     "category": "交互与动效"
+  },
+  {
+    "date": "2026-09-20",
+    "site_id": "webflow",
+    "name": "Webflow",
+    "url": "https://webflow.com/",
+    "category": "产品与工具界面"
   }
 ]
