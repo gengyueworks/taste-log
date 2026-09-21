@@ -341,5 +341,12 @@
     "name": "Webflow",
     "url": "https://webflow.com/",
     "category": "产品与工具界面"
+  },
+  {
+    "date": "2026-09-21",
+    "site_id": "cargo",
+    "name": "Cargo",
+    "url": "https://cargo.site/",
+    "category": "个人主页与作品集"
   }
 ]
