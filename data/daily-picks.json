@@ -362,5 +362,12 @@
     "name": "A24",
     "url": "https://a24films.com/",
     "category": "品牌识别"
+  },
+  {
+    "date": "2026-09-24",
+    "site_id": "figma",
+    "name": "Figma",
+    "url": "https://www.figma.com/",
+    "category": "产品与工具界面"
   }
 ]
