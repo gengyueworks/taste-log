@@ -369,5 +369,12 @@
     "name": "Figma",
     "url": "https://www.figma.com/",
     "category": "产品与工具界面"
+  },
+  {
+    "date": "2026-09-25",
+    "site_id": "monocle",
+    "name": "Monocle",
+    "url": "https://monocle.com/",
+    "category": "杂志刊物感"
   }
 ]
