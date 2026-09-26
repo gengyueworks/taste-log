@@ -376,5 +376,12 @@
     "name": "Monocle",
     "url": "https://monocle.com/",
     "category": "杂志刊物感"
+  },
+  {
+    "date": "2026-09-26",
+    "site_id": "arc",
+    "name": "Arc",
+    "url": "https://arc.net/",
+    "category": "品牌识别"
   }
 ]
