@@ -383,5 +383,12 @@
     "name": "Arc",
     "url": "https://arc.net/",
     "category": "品牌识别"
+  },
+  {
+    "date": "2026-09-27",
+    "site_id": "mubi",
+    "name": "MUBI",
+    "url": "https://mubi.com/",
+    "category": "策展与灵感网络"
   }
 ]
