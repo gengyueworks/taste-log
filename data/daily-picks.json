@@ -425,5 +425,12 @@
     "name": "Curvit",
     "url": "https://curvit.me/",
     "category": "个人主页与作品集"
+  },
+  {
+    "date": "2026-10-03",
+    "site_id": "perplexity",
+    "name": "Perplexity",
+    "url": "https://www.perplexity.ai/",
+    "category": "产品与工具界面"
   }
 ]
