@@ -663,5 +663,12 @@
     "name": "LoveFrom",
     "url": "https://www.lovefrom.com/",
     "category": "设计工作室"
+  },
+  {
+    "date": "2026-11-06",
+    "site_id": "rive",
+    "name": "Rive",
+    "url": "https://rive.app/",
+    "category": "交互与动效"
   }
 ]
