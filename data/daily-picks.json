@@ -705,5 +705,12 @@
     "name": "A24",
     "url": "https://a24films.com/",
     "category": "品牌识别"
+  },
+  {
+    "date": "2026-11-12",
+    "site_id": "rive",
+    "name": "Rive",
+    "url": "https://rive.app/",
+    "category": "交互与动效"
   }
 ]
