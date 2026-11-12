@@ -438,6 +438,15 @@
       "category": "curation",
       "tag": "AI 生成 UI / 灵感社区",
       "note": "AI 生成 UI 的灵感社区，被叫「AI 时代的 Pinterest」不夸张。它不让你描述需求，而是直接给你 endless designs 让你 scroll——首页那句「Most tools make you explain what you want. Variant just shows you.」就是它的核心判断。真正值钱的是 community 里各国设计师用天马行空 prompt 攒出来的排版和界面，一种「视觉按摩」。更深一层：它在对抗 LLM 带来的审美均质化（「AI 味」），当模型能力边际递减，审美的独特性成了创作者的最后壁垒，而这里把 prompt 本身变成了审美客体。适合做 UI/排版卡壳时去洗眼、看全球审美差异。"
+    },
+    {
+      "id": "opentools-news",
+      "name": "OpenTools · News",
+      "url": "https://opentools.ai/news/openai-acquires-odessia-ai-travel-agent",
+      "date": "2026-11-12",
+      "category": "longform",
+      "tag": "新闻长文 / 导航入口",
+      "note": "被记住的不是正文，是顶栏。fixed 白底 + 1px 下边框的全局导航里，Tools / Experts / Newsletter / Knowledge Hub / Industry Hub / Advertise 一律灰字（text-gray-700），只有紧挨最右实心 Get started 按钮的「Learn AI」是蓝色纯文字链接（#2563EB，无底色无边框无图标），整排灰字里唯一的彩字反而成了第二视觉落点；它指向 /ai-edge 学习页而不是注册页，把「先教会你」和转化按钮并列放在右上角。正文是卡片窄栏长文 + sticky top-24 侧栏（In This Article 目录 / Mentioned 实体标签 / 订阅卡）+ 文末编号 Sources，目录存在感压得极低，符合长文页「安静陪读」的标准。能拿走：次要但重要的入口不必做按钮，导航最右端 + 唯一强调色 + 纯文字，就能抬到接近主 CTA 的优先级，又不抢主按钮。"
     }
   ],
   "sources": [

@@ -34,6 +34,7 @@
 | 酒店网站 | trk · oyomhotel |
 | 品牌产地叙事 | smithfieldcattleco |
 | 个人记号 | G + Klein Blue |
+| 导航与转化层级 | OpenTools · 右上蓝色 Learn AI |
 
 ---
 
@@ -220,6 +221,14 @@
 - **截图**：
   - `/Volumes/拓展坞 1T2022/2 Codex-Workspace/Codex-Workspace-Main/30-项目-网站/网页灵感池/00-个人审美与Taste底库-2026-03-22/images/graceelizabeth-G记号-2026-03-25-23-00-15.png`
   - `/Volumes/拓展坞 1T2022/2 Codex-Workspace/Codex-Workspace-Main/30-项目-网站/网页灵感池/00-个人审美与Taste底库-2026-03-22/images/graceelizabeth-G记号-2026-03-25-23-00-18.png`
+
+### 22. OpenTools · 右上角那个蓝色的 Learn AI
+
+- **链接**：https://opentools.ai/news/openai-acquires-odessia-ai-travel-agent
+- **喜欢哪一块**：右上角「Learn AI」。顶栏一整排导航全是灰字，只有它是蓝色纯文字链接，紧挨着最右边的实心「Get started」按钮，一眼就看见。
+- **为什么好**：显眼靠的是差异，不是形状。header 是 fixed 白底 + 1px 下边框，Tools / Experts / Newsletter / Knowledge Hub / Industry Hub / Advertise 全是 `text-gray-700`；「Learn AI」用 `#2563EB`（hover `#1D4ED8`），没有底色、边框、图标、下拉箭头，整条顶栏的着色只出现在它和「Launch my Tool/MCP」两处。主 CTA 已经是实心 indigo 按钮，次级入口再做成按钮就会互抢；做成整排灰字里唯一的彩字，反而稳稳成为第二落点，白底秩序一点没破。语义更值得记：链接指向 `/ai-edge` 学习页，把「先教会你」放在全局导航最右端、贴着注册按钮——内容型产品的价值排序直接写进了导航。而且它只在 xl 以上断点进顶栏，移动端收进汉堡菜单，是有断点的显眼，不是硬塞。
+- **能拿走**：给「次要但希望被看见」的入口（学习 / 文档 / 归档 / 关于）一套通用解法：导航最右端 + 唯一强调色 + 纯文字链接，不加按钮不加图标，全站强调色控制在 1–2 处。这正是 `docs/preferences.md` 第六条「品牌色只出现在 Logo、链接、导航和少量强调位置」的正样本。
+- **收录日期**：2026-11-12
 
 ---
 

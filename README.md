@@ -41,12 +41,12 @@ Taste Log 把网页灵感整理成可以再次调用的判断：每条记录包�
 
 | 内容 | 说明 |
 |------|------|
-| **49 个站点** | 每个带分类、收录日期、标签 |
+| **50 个站点** | 每个带分类、收录日期、标签 |
 | **15 条设计判断** | 具体到「哪一块好」「适合什么场景」「什么细节能迁移」，持续补 |
 | **9 个分类** | 杂志刊物感 / 长文阅读页 / 产品与工具界面 / 字体工作室 / 设计工作室 / 交互与动效 / 品牌识别 / 策展网络 / 个人主页 |
 | **4 个精华** | Kinfolk（编辑气质）· Craft（温柔工具感）· Land-book（抓模块）· Linear（科技秩序） |
 | **4 个源头站** | 自己找站时从哪进，各自适合干什么 |
-| **21 张审美卡** | 一卡一判断：「喜欢哪一块」+「能拿走」，做页面时的细节弹药库 |
+| **22 张审美卡** | 一卡一判断：「喜欢哪一块」+「能拿走」，做页面时的细节弹药库 |
 | **打卡链** | 全年 365 格，localStorage 本地存，不上传任何数据 |
 
 ## 收录标准
@@ -142,7 +142,7 @@ The streak lives in the current browser's `localStorage`; no data is uploaded. G
 
 ## What's inside
 
-- **49 sites**, each with category, date and tag
+- **50 sites**, each with category, date and tag
 - **15 design notes** — specific about which part works, what context it fits, what's transferable
 - **9 categories** — editorial, longform reading, product UI, type foundries, design studios, motion, brand identity, curation, portfolios
 - **4 pinned picks** — Kinfolk, Craft, Land-book, Linear
