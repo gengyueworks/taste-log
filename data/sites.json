@@ -447,6 +447,15 @@
       "category": "longform",
       "tag": "新闻长文 / 导航入口",
       "note": "被记住的不是正文，是顶栏。fixed 白底 + 1px 下边框的全局导航里，Tools / Experts / Newsletter / Knowledge Hub / Industry Hub / Advertise 一律灰字（text-gray-700），只有紧挨最右实心 Get started 按钮的「Learn AI」是蓝色纯文字链接（#2563EB，无底色无边框无图标），整排灰字里唯一的彩字反而成了第二视觉落点；它指向 /ai-edge 学习页而不是注册页，把「先教会你」和转化按钮并列放在右上角。正文是卡片窄栏长文 + sticky top-24 侧栏（In This Article 目录 / Mentioned 实体标签 / 订阅卡）+ 文末编号 Sources，目录存在感压得极低，符合长文页「安静陪读」的标准。能拿走：次要但重要的入口不必做按钮，导航最右端 + 唯一强调色 + 纯文字，就能抬到接近主 CTA 的优先级，又不抢主按钮。"
+    },
+    {
+      "id": "workos-airlock",
+      "name": "WorkOS Airlock",
+      "url": "https://workos.com/airlock",
+      "date": "2026-11-15",
+      "category": "product",
+      "tag": "工作流动图 / 课程讲解骨架",
+      "note": "被记住的不是产品文案，是中间那张工作流动图。三段式：01 Intent 放一句人话任务卡（Find last month's duplicate charges and refund them.）→ 02 Actions 放三行真实工具调用（search · charges, last 30 days / refund · $1,240 / delete · customer record）→ 03 Verdicts 放三行判定，每行一颗小图标加一句话理由（Allowed · search is read-only / Needs approval · moves money / Denied · outside the intent）。三列共用同一组 CSS 行轨道（grid subgrid），所以「位号 / 名词标题 / 一句解释 / 示例块」四行在每个 01、02、03 上严格水平对齐，读者从左往右横扫一遍就懂了模型。前置还有一段并置：Manual approval 与 YOLO mode 两张卡各配一条实物证据（终端选择菜单 / $ agent --dangerously-skip-permissions 加 214 tool calls · 0 reviewed），两卡中间留一个虚线圆角空位，滚动到此处图标才淡入占位，先把两难摆平再给解法。能拿走：讲课程、讲流程时用「输入 → 动作 → 判定」三段同行对齐的骨架；判定状态必须三态并列且每个都带一句人话理由；示例写真实数字（$1,240）不写占位符，可信度全靠这一层。"
     }
   ],
   "sources": [

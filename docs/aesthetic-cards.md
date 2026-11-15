@@ -35,6 +35,7 @@
 | 品牌产地叙事 | smithfieldcattleco |
 | 个人记号 | G + Klein Blue |
 | 导航与转化层级 | OpenTools · 右上蓝色 Learn AI |
+| 工作流动图 / 分步讲解 | WorkOS Airlock |
 
 ---
 
@@ -229,6 +230,14 @@
 - **为什么好**：显眼靠的是差异，不是形状。header 是 fixed 白底 + 1px 下边框，Tools / Experts / Newsletter / Knowledge Hub / Industry Hub / Advertise 全是 `text-gray-700`；「Learn AI」用 `#2563EB`（hover `#1D4ED8`），没有底色、边框、图标、下拉箭头，整条顶栏的着色只出现在它和「Launch my Tool/MCP」两处。主 CTA 已经是实心 indigo 按钮，次级入口再做成按钮就会互抢；做成整排灰字里唯一的彩字，反而稳稳成为第二落点，白底秩序一点没破。语义更值得记：链接指向 `/ai-edge` 学习页，把「先教会你」放在全局导航最右端、贴着注册按钮——内容型产品的价值排序直接写进了导航。而且它只在 xl 以上断点进顶栏，移动端收进汉堡菜单，是有断点的显眼，不是硬塞。
 - **能拿走**：给「次要但希望被看见」的入口（学习 / 文档 / 归档 / 关于）一套通用解法：导航最右端 + 唯一强调色 + 纯文字链接，不加按钮不加图标，全站强调色控制在 1–2 处。这正是 `docs/preferences.md` 第六条「品牌色只出现在 Logo、链接、导航和少量强调位置」的正样本。
 - **收录日期**：2026-11-12
+
+### 23. WorkOS Airlock · 三段式工作流动图（讲课程可以直接搬）
+
+- **链接**：https://workos.com/airlock
+- **喜欢哪一块**：中间那段工作流动图。三列 01 Intent / 02 Actions / 03 Verdicts，每一列都是「位号 + 名词标题 + 一句解释 + 一个示例块」四行，三段严格水平对齐，从左往右读一遍就把「任务进 → 工具被调 → 每次调用被判定」讲完了。
+- **为什么好**：讲流程最难的是让人看见「同一条链上前后怎么咬合」，它用排版的机械对齐解决了这件事。三列不是三个并排卡片，而是共用同一组 CSS 行轨道的 subgrid（每列 `row-span-3` + `grid-rows-subgrid`），所以四个行位在 01、02、03 上高度完全一致，眼睛横扫不会掉行。示例块全是真的：Intent 是一句人话任务「Find last month's duplicate charges and refund them.」，Actions 是三行真实调用「search · charges, last 30 days / refund · $1,240 / delete · customer record」，Verdicts 是三行判定，每行一颗小图标加一句人话理由「Allowed · search is read-only / Needs approval · moves money / Denied · outside the intent」。判定不是红绿灯式的三个色块，而是三行同等体量、理由同样短的句子，读者自己就能判断为什么这条被拦。前置还设了一段两难并置：Manual approval 和 YOLO mode 两张卡各配一条实物证据（终端式选择菜单 / `$ agent --dangerously-skip-permissions` 加 `214 tool calls · 0 reviewed`），两卡中间留一块虚线圆角空位，滚到此处图标才淡入落位，先把「要么累死要么翻车」摆平，再给第三条路。
+- **能拿走**：做课程页、方法页、系统说明页时，直接搬这套三段骨架——第一段放输入（用户的原始意图，用人话写），第二段放动作（系统真的收到了什么，用真实参数），第三段放判定（允许 / 需确认 / 拒绝三态并列，每态配一句极短理由）。三个硬约束：① 三列必须同行对齐，用 subgrid 或统一 min-height，不要各写各的高度；② 示例禁用 Lorem 和占位数字，真实金额、真实参数是可信度的全部来源；③ 判定态要写「为什么」，只写结果读者记不住。同理可迁移到「AI 一次任务怎么跑」「一篇文章怎么过六道检查」「一条日报从选题到上线」这类任何有输入和裁量的流程。
+- **收录日期**：2026-11-15
 
 ---
 
