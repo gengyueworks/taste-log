@@ -733,5 +733,12 @@
     "name": "Cargo",
     "url": "https://cargo.site/",
     "category": "个人主页与作品集"
+  },
+  {
+    "date": "2026-11-16",
+    "site_id": "opentools-news",
+    "name": "OpenTools · News",
+    "url": "https://opentools.ai/news/openai-acquires-odessia-ai-travel-agent",
+    "category": "长文阅读页"
   }
 ]

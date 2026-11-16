@@ -4,12 +4,13 @@ candidate-radar.py — 每日 GitHub 推荐 + 候选雷达
 
 每天（由 .github/workflows/daily-candidates.yml 在 GitHub 服务器上触发）：
 
-1. 【每日推荐 · 必有】从 data/sites.json 按「当天是这一年第几天」挑一个站作为
+1. 【每日推荐 · 必有】从 data/sites.json 按「最久没被推荐过」挑一个站作为
    「今日推荐」：开一个 issue 推到 GitHub，同时把这条写进 data/daily-picks.json
    并 commit 回仓库。完全本地、零外部依赖，永远能跑——这就是「每天到 GitHub 上
-   推荐一次」。连续不重样的天数由当前主库条目数决定。
-2. 【候选雷达 · 附赠】顺手去几个源头站扫一遍外链，当作「新候选」附在 issue 末尾，
-   仅供拍板，绝不自动写进 sites.json。
+   推荐一次」。池子转完一圈才会回头，不会隔几天推同一个站。
+2. 【今日候选 · 附赠】从本地 data/candidates.json（scripts/discover-candidates.py
+   每天扫源头站攒的）里取最新的几条当「今日候选」附在 issue 末尾，仅供拍板，
+   绝不自动写进 sites.json；本地没跑过长扫描时才现场抓一遍兜底。
 
 需要环境变量 GITHUB_TOKEN（workflow 自动注入）；本地调试没有 token 时会打印不开 issue。
 同一天重复跑不会刷重复 issue、不会重复写记录（按日期去重）。
@@ -26,6 +27,7 @@ REPO = "gengyueworks/taste-log"
 UA = "Mozilla/5.0 (compatible; taste-log-radar/1.0; +https://github.com/gengyueworks/taste-log)"
 PAGES_URL = "https://gengyueworks.github.io/taste-log/"
 DAILY_LOG_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "daily-picks.json")
+CAND_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "candidates.json")
 
 SOURCES = {
     "Land-book": "https://land-book.com/websites",
@@ -81,11 +83,29 @@ def append_daily_pick(records, featured, czh, today_str):
     return records, True
 
 
-def select_featured(sites, target_date):
-    """按年内日期稳定选择一个站点，空库直接给出可读错误。"""
+def select_featured(sites, target_date, records=None):
+    """挑今天推荐哪个站：最久没推过的优先，一圈转完才回头。
+
+    只按「年内第几天取模」会让 49 个站 49 天转一圈、永不新增，还会在同一天
+    重复落到同一批站上；改成看 daily-picks.json 里每个站上一次被推的日期，
+    取最早的那个，就保证了「先补齐没推过的，再把老的轮到」，池子长多久都不会
+    出现昨天推过的今天又推。
+    """
     if not sites:
         raise ValueError("data/sites.json 没有可推荐的站点")
-    return sites[day_of_year(target_date) % len(sites)]
+    last_seen = {}
+    for r in records or []:
+        sid = r.get("site_id")
+        d = r.get("date") or ""
+        if sid and d > last_seen.get(sid, ""):
+            last_seen[sid] = d
+    n = len(sites)
+    offset = day_of_year(target_date) % n
+    order = sorted(
+        range(n),
+        key=lambda i: (last_seen.get(sites[i].get("id", ""), ""), (offset + i) % n),
+    )
+    return sites[order[0]]
 
 
 def write_daily_log(records):
@@ -146,41 +166,62 @@ def issue_exists_today(token, today_str):
     return any(today_str in (i.get("title") or "") for i in issues)
 
 
+def load_candidate_pool(limit=3):
+    """读本地候选池（scripts/discover-candidates.py 每天写），取最新几条待判断的。"""
+    if not os.path.exists(CAND_PATH):
+        return []
+    try:
+        with open(CAND_PATH, encoding="utf-8") as f:
+            store = json.load(f)
+    except (OSError, ValueError):
+        return []
+    items = [it for it in store.get("items", []) if it.get("status") == "new"]
+    items.sort(key=lambda it: it.get("first_seen", ""), reverse=True)
+    return items[:limit]
+
+
 def main():
     data = load_sites()
     sites = data.get("sites", [])
     today = date.today()
     today_str = today.isoformat()
-    featured = select_featured(sites, today)
+    records = load_daily_log()
+    featured = select_featured(sites, today, records)
     czh = cat_zh(data, featured.get("category", ""))
 
     # 每日记录：写进 data/daily-picks.json（workflow 会把它 commit 回仓库）
-    records, changed = append_daily_pick(load_daily_log(), featured, czh, today_str)
+    records, changed = append_daily_pick(records, featured, czh, today_str)
     if changed:
         write_daily_log(records)
         print(f"[record] 已写入 data/daily-picks.json（{today_str} · {featured['name']}）")
     else:
         print(f"[record] {today_str} 已在 daily-picks.json 中，无需重复写。")
 
-    # 附赠：外部候选扫描（best-effort，被挡就跳过）
-    existing = set()
-    from urllib.parse import urlparse
-    for s in sites:
-        try:
-            existing.add(urlparse(s["url"]).netloc.lower().replace("www.", ""))
-        except Exception:
-            pass
-    candidates = []
-    for name, url in SOURCES.items():
-        print(f"[scan] {name} …")
-        for host, lnk in fetch_links(url):
-            if host in existing:
-                continue
-            candidates.append((name, host, lnk))
+    # 候选池：优先用本地 discover-candidates.py 每天扫出来的（带标题、已验活）；
+    # 本地没跑过才现场扫一遍兜底（容易 403/429，只当垫底）。
+    pool = load_candidate_pool(limit=3)
+    candidates = []  # (source, url, title)
+    if pool:
+        print(f"[pool] 候选池里待判断 {len(pool)} 条")
+        candidates = [(it.get("source", ""), it.get("url", ""), it.get("title", "")) for it in pool]
+    else:
+        existing = set()
+        from urllib.parse import urlparse
+        for s in sites:
+            try:
+                existing.add(urlparse(s["url"]).netloc.lower().replace("www.", ""))
+            except Exception:
+                pass
+        for name, url in SOURCES.items():
+            print(f"[scan] {name} …")
+            for host, lnk in fetch_links(url):
+                if host in existing:
+                    continue
+                candidates.append((name, lnk, ""))
+                if len(candidates) >= 12:
+                    break
             if len(candidates) >= 12:
                 break
-        if len(candidates) >= 12:
-            break
 
     # 组装 issue
     note = featured.get("note") or "（这个站还没写判断，打开看完补一句它好在哪，这条就成立了。）"
@@ -199,12 +240,14 @@ def main():
     ]
     labels = ["daily-pick"]
     if candidates:
-        body += ["", "---", "", "### 新候选（自动扫描，待你拍板，不会自动入库）", "",
-                 "| 源头 | 候选 |", "|------|------|"]
-        for name, host, lnk in candidates:
-            body.append(f"| {name} | {lnk} |")
+        body += ["", "---", "", "### 今日候选（源头扫出来的新站，待判断，不会自动入库）", "",
+                 "| 源头 | 候选 | 站名 |", "|------|------|------|"]
+        for name, lnk, ttl in candidates:
+            ttl = (ttl or "—").replace("|", "·")
+            body.append(f"| {name} | {lnk} | {ttl} |")
         body.append("")
-        body.append("看上哪个，开 issue 按 `docs/criteria.md` 的格式补一句判断，维护者收进档案。")
+        body.append("按 `docs/criteria.md` 三条过一遍：第一屏有气质判断 / 结构成熟 / 有能拿走的东西。")
+        body.append("通过的写进 `data/sites.json`（带 note），并补一张审美卡。")
         labels.append("candidates")
 
     title = f"今日推荐 · {today_str} · {featured['name']}"

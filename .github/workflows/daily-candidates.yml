@@ -22,6 +22,9 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Discover fresh candidates（源头扫一遍，攒候选池）
+        run: python3 scripts/discover-candidates.py --limit 30
+
       - name: Run candidate radar
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -31,7 +34,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/daily-picks.json
+          git add data/daily-picks.json data/candidates.json
           if git diff --cached --quiet; then
             echo "今日记录无变化，跳过 commit"
           else

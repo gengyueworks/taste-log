@@ -29,6 +29,42 @@ class CandidateRadarTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "没有可推荐的站点"):
             candidate_radar.select_featured([], date(2026, 1, 1))
 
+    def test_select_featured_skips_recently_featured_sites(self):
+        """回归测试：11-06~11-11 推过 Rive/Spline/Webflow/Cargo/Milanote/A24 之后，
+        11-12 又推回 Rive（49 站取模轮转的死穴）。现在必须优先挑从没推过的。"""
+        sites = [{"id": sid} for sid in ("rive", "spline", "webflow", "cargo", "fresh-a", "fresh-b")]
+        records = [
+            {"date": f"2026-11-0{i}", "site_id": sid}
+            for i, sid in enumerate(("rive", "spline", "webflow", "cargo"), start=6)
+        ]
+
+        picked = candidate_radar.select_featured(sites, date(2026, 11, 12), records)
+
+        self.assertIn(picked["id"], ("fresh-a", "fresh-b"))
+
+    def test_select_featured_returns_oldest_when_pool_is_exhausted(self):
+        sites = [{"id": "a"}, {"id": "b"}, {"id": "c"}]
+        records = [
+            {"date": "2026-11-01", "site_id": "a"},
+            {"date": "2026-11-05", "site_id": "b"},
+            {"date": "2026-11-09", "site_id": "c"},
+        ]
+
+        picked = candidate_radar.select_featured(sites, date(2026, 11, 12), records)
+
+        self.assertEqual(picked["id"], "a")
+
+    def test_select_featured_never_repeats_within_one_cycle(self):
+        sites = [{"id": str(i)} for i in range(5)]
+        records = []
+        picked = []
+        for day in range(1, 6):
+            site = candidate_radar.select_featured(sites, date(2026, 11, day), records)
+            picked.append(site["id"])
+            records.append({"date": f"2026-11-{day:02d}", "site_id": site["id"]})
+
+        self.assertEqual(len(set(picked)), 5)
+
     def test_append_daily_pick_is_idempotent_for_the_same_date(self):
         featured = {"id": "linear", "name": "Linear", "url": "https://linear.app/"}
         records = []
