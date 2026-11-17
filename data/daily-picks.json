@@ -740,5 +740,12 @@
     "name": "OpenTools · News",
     "url": "https://opentools.ai/news/openai-acquires-odessia-ai-travel-agent",
     "category": "长文阅读页"
+  },
+  {
+    "date": "2026-11-17",
+    "site_id": "workos-airlock",
+    "name": "WorkOS Airlock",
+    "url": "https://workos.com/airlock",
+    "category": "产品与工具界面"
   }
 ]
