@@ -1,6 +1,278 @@
 {
-  "updated": "2026-11-17",
+  "updated": "2026-11-18",
   "items": [
+    {
+      "host": "productionportugal.com",
+      "url": "https://productionportugal.com/",
+      "title": "Production Portugal: Your trusted film production company in Portugal and Spain",
+      "source": "Awwwards · 每日精选",
+      "first_seen": "2026-11-18",
+      "last_seen": "2026-11-18",
+      "status": "new"
+    },
+    {
+      "host": "animaapp.com",
+      "url": "https://www.animaapp.com/?utm_content=awww-gif&amp;utm_campaign=playground-ai-launch&amp;utm_medium=banner&amp;utm_source=awwward",
+      "title": "Anima: Build Websites &amp; Apps with AI | UX Design Agent | Figma to Code",
+      "source": "Awwwards · 本周",
+      "first_seen": "2026-11-18",
+      "last_seen": "2026-11-18",
+      "status": "new"
+    },
+    {
+      "host": "bcgbuildingdesign.com.au",
+      "url": "https://bcgbuildingdesign.com.au/",
+      "title": "Building Designer Gold Coast | BCG Building Design",
+      "source": "Awwwards · 本周",
+      "first_seen": "2026-11-18",
+      "last_seen": "2026-11-18",
+      "status": "new"
+    },
+    {
+      "host": "impastofornoantico.com",
+      "url": "https://www.impastofornoantico.com/",
+      "title": "Handcrafted Bread with Soul - Impasto",
+      "source": "Awwwards · 本周",
+      "first_seen": "2026-11-18",
+      "last_seen": "2026-11-18",
+      "status": "new"
+    },
+    {
+      "host": "anthracitestudio.be",
+      "url": "https://anthracitestudio.be",
+      "title": "Web designer &amp; développeur en Wallonie | Anthracite Studio",
+      "source": "Awwwards · 本周",
+      "first_seen": "2026-11-18",
+      "last_seen": "2026-11-18",
+      "status": "new"
+    },
+    {
+      "host": "helloworlddsgn.com",
+      "url": "https://helloworlddsgn.com",
+      "title": "Hello_world_design — it all starts with curiosity",
+      "source": "Awwwards · 本周",
+      "first_seen": "2026-11-18",
+      "last_seen": "2026-11-18",
+      "status": "new"
+    },
+    {
+      "host": "wedding.s-tmro.com",
+      "url": "https://wedding.s-tmro.com/",
+      "title": "Wedding Invitation | Yuri &amp; Tomoro",
+      "source": "Awwwards · 本周",
+      "first_seen": "2026-11-18",
+      "last_seen": "2026-11-18",
+      "status": "new"
+    },
+    {
+      "host": "book.sequel.co",
+      "url": "https://book.sequel.co/",
+      "title": "The First Fifty",
+      "source": "Awwwards · 本周",
+      "first_seen": "2026-11-18",
+      "last_seen": "2026-11-18",
+      "status": "new"
+    },
+    {
+      "host": "eezyinn.de",
+      "url": "https://eezyinn.de",
+      "title": "eezy inn – Agentur für SEO, GEO &amp; Conversion aus Vechta",
+      "source": "Awwwards · 本周",
+      "first_seen": "2026-11-18",
+      "last_seen": "2026-11-18",
+      "status": "new"
+    },
+    {
+      "host": "shutabug.com",
+      "url": "https://shutabug.com/",
+      "title": "Shutabug | Black &amp; African Art Prints by Mayowa Alabi",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-18",
+      "last_seen": "2026-11-18",
+      "status": "new"
+    },
+    {
+      "host": "trammat.helenadang.work",
+      "url": "https://trammat.helenadang.work",
+      "title": "TRĂM MẶT · the face language of hát bội",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-18",
+      "last_seen": "2026-11-18",
+      "status": "new"
+    },
+    {
+      "host": "mowa.studio",
+      "url": "https://mowa.studio/",
+      "title": "mowa.studio — Webdesign, Branding &amp; 3D aus Wien",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-18",
+      "last_seen": "2026-11-18",
+      "status": "new"
+    },
+    {
+      "host": "grayainstitute.com.au",
+      "url": "https://grayainstitute.com.au/",
+      "title": "GRAYA™ Institute | Property Development Education &amp; Research",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-18",
+      "last_seen": "2026-11-18",
+      "status": "new"
+    },
+    {
+      "host": "design.joinvoy.com",
+      "url": "https://design.joinvoy.com",
+      "title": "Voy Design | Designing for 100 Years of Healthy Living",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-18",
+      "last_seen": "2026-11-18",
+      "status": "new"
+    },
+    {
+      "host": "fratellisimonetti.com",
+      "url": "https://www.fratellisimonetti.com/",
+      "title": "",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-18",
+      "last_seen": "2026-11-18",
+      "status": "new"
+    },
+    {
+      "host": "longhoang-lyo.com",
+      "url": "https://longhoang-lyo.com/",
+      "title": "Long Hoang (Lyo) – Designer & Developer",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-18",
+      "last_seen": "2026-11-18",
+      "status": "new"
+    },
+    {
+      "host": "supereightstudio.com",
+      "url": "https://supereightstudio.com",
+      "title": "Super 8 Studio · Independent branding studio for fintech and B2B tech",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-18",
+      "last_seen": "2026-11-18",
+      "status": "new"
+    },
+    {
+      "host": "arshkhachatrian.com",
+      "url": "https://arshkhachatrian.com/",
+      "title": "Arsh Khachatrian · Creative Frontend Engineer &amp; Photographer",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-18",
+      "last_seen": "2026-11-18",
+      "status": "new"
+    },
+    {
+      "host": "garuda2026.offwg.com",
+      "url": "https://garuda2026.offwg.com/",
+      "title": "OFFWG | GARUDA 2026 – Drawn for History",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-18",
+      "last_seen": "2026-11-18",
+      "status": "new"
+    },
+    {
+      "host": "orvae.undreamstudio.com",
+      "url": "https://orvae.undreamstudio.com/",
+      "title": "ORVAE — Where Vision Becomes Legacy · Immersive 3D Concept",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-18",
+      "last_seen": "2026-11-18",
+      "status": "new"
+    },
+    {
+      "host": "biegajaca-sztuka.pl",
+      "url": "https://biegajaca-sztuka.pl/en",
+      "title": "Krzysztof Lewandowski, painter | Running Art",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-18",
+      "last_seen": "2026-11-18",
+      "status": "new"
+    },
+    {
+      "host": "telemyr.com",
+      "url": "http://telemyr.com",
+      "title": "Telemyr",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-18",
+      "last_seen": "2026-11-18",
+      "status": "new"
+    },
+    {
+      "host": "leborrel.nl",
+      "url": "https://www.leborrel.nl/",
+      "title": "Le Borrel — Shine · Dance · Enjoy",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-18",
+      "last_seen": "2026-11-18",
+      "status": "new"
+    },
+    {
+      "host": "psychoactive.co.nz",
+      "url": "https://www.psychoactive.co.nz/",
+      "title": "Psychoactive Studios — AI-era Design &amp; Development Agency",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-18",
+      "last_seen": "2026-11-18",
+      "status": "new"
+    },
+    {
+      "host": "kivoagentic.ai",
+      "url": "https://www.kivoagentic.ai/",
+      "title": "Kivo – Domain-Focused AI Execution Platform",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-18",
+      "last_seen": "2026-11-18",
+      "status": "new"
+    },
+    {
+      "host": "podpolite.com",
+      "url": "https://www.podpolite.com",
+      "title": "PodPolite",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-18",
+      "last_seen": "2026-11-18",
+      "status": "new"
+    },
+    {
+      "host": "boardui.com",
+      "url": "https://www.boardui.com/",
+      "title": "BoardUI - React Design System for Dashboards",
+      "source": "SaaS Landing Page",
+      "first_seen": "2026-11-18",
+      "last_seen": "2026-11-18",
+      "status": "new"
+    },
+    {
+      "host": "crafted.is",
+      "url": "https://www.crafted.is/",
+      "title": "Crafted Design Studio",
+      "source": "SaaS Landing Page",
+      "first_seen": "2026-11-18",
+      "last_seen": "2026-11-18",
+      "status": "new"
+    },
+    {
+      "host": "expedia.com",
+      "url": "https://www.expedia.com/route66/",
+      "title": "",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-18",
+      "last_seen": "2026-11-18",
+      "status": "dead",
+      "reason": "HTTP 429"
+    },
+    {
+      "host": "asklionel.tech",
+      "url": "https://www.asklionel.tech/",
+      "title": "",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-18",
+      "last_seen": "2026-11-18",
+      "status": "dead",
+      "reason": "HTTP 429"
+    },
     {
       "host": "sweet-tape.com",
       "url": "https://sweet-tape.com/",

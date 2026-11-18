@@ -747,5 +747,12 @@
     "name": "WorkOS Airlock",
     "url": "https://workos.com/airlock",
     "category": "产品与工具界面"
+  },
+  {
+    "date": "2026-11-18",
+    "site_id": "figma",
+    "name": "Figma",
+    "url": "https://www.figma.com/",
+    "category": "产品与工具界面"
   }
 ]
