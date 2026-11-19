@@ -1,6 +1,276 @@
 {
-  "updated": "2026-11-18",
+  "updated": "2026-11-19",
   "items": [
+    {
+      "host": "nucleoapp.com",
+      "url": "https://nucleoapp.com/",
+      "title": "Nucleo – The Ultimate Icon Bundle | 40,000+ SVG Icons",
+      "source": "SaaS Landing Page",
+      "first_seen": "2026-11-19",
+      "last_seen": "2026-11-19",
+      "status": "new"
+    },
+    {
+      "host": "getsymmetry.com",
+      "url": "https://www.getsymmetry.com/",
+      "title": "Symmetry AI — The Work Finds Itself and Gets Done",
+      "source": "SaaS Landing Page",
+      "first_seen": "2026-11-19",
+      "last_seen": "2026-11-19",
+      "status": "new"
+    },
+    {
+      "host": "audienceful.com",
+      "url": "https://www.audienceful.com/",
+      "title": "Audienceful: Agentic Email Marketing Automation",
+      "source": "SaaS Landing Page",
+      "first_seen": "2026-11-19",
+      "last_seen": "2026-11-19",
+      "status": "new"
+    },
+    {
+      "host": "relato.com",
+      "url": "https://www.relato.com/",
+      "title": "Relato — AI Content Agents for Marketing Teams",
+      "source": "SaaS Landing Page",
+      "first_seen": "2026-11-19",
+      "last_seen": "2026-11-19",
+      "status": "new"
+    },
+    {
+      "host": "restless.ai",
+      "url": "https://www.restless.ai/",
+      "title": "Restless",
+      "source": "SaaS Landing Page",
+      "first_seen": "2026-11-19",
+      "last_seen": "2026-11-19",
+      "status": "new"
+    },
+    {
+      "host": "twelvelabs.io",
+      "url": "https://www.twelvelabs.io/",
+      "title": "TwelveLabs: Video Intelligence Platform &amp; API",
+      "source": "SaaS Landing Page",
+      "first_seen": "2026-11-19",
+      "last_seen": "2026-11-19",
+      "status": "new"
+    },
+    {
+      "host": "incident.io",
+      "url": "https://incident.io/",
+      "title": "AI software reliability platform | incident.io",
+      "source": "SaaS Landing Page",
+      "first_seen": "2026-11-19",
+      "last_seen": "2026-11-19",
+      "status": "new"
+    },
+    {
+      "host": "patensify.com",
+      "url": "https://patensify.com/en/",
+      "title": "Patensify — Attention on Instagram has a name.",
+      "source": "SaaS Landing Page",
+      "first_seen": "2026-11-19",
+      "last_seen": "2026-11-19",
+      "status": "new"
+    },
+    {
+      "host": "accessgrid.com",
+      "url": "https://accessgrid.com/",
+      "title": "AccessGrid - API for NFC Access Passes on mobile with MIFARE DESFire compatibility",
+      "source": "SaaS Landing Page",
+      "first_seen": "2026-11-19",
+      "last_seen": "2026-11-19",
+      "status": "new"
+    },
+    {
+      "host": "plausible.io",
+      "url": "https://plausible.io",
+      "title": "Plausible Analytics | Simple, privacy-friendly Google Analytics alternative",
+      "source": "Minimal Gallery",
+      "first_seen": "2026-11-19",
+      "last_seen": "2026-11-19",
+      "status": "new"
+    },
+    {
+      "host": "21ef0880.delivery.rocketcdn.me",
+      "url": "https://21ef0880.delivery.rocketcdn.me/wp-content/themes/minimalgallery/assets/fonts/inter_5.3.0_latin-wght-normal.woff2",
+      "title": "",
+      "source": "Minimal Gallery",
+      "first_seen": "2026-11-19",
+      "last_seen": "2026-11-19",
+      "status": "new"
+    },
+    {
+      "host": "bsky.app",
+      "url": "https://bsky.app/profile/minimalgallery.bsky.social",
+      "title": "@minimalgallery.bsky.social on Bluesky",
+      "source": "Minimal Gallery",
+      "first_seen": "2026-11-19",
+      "last_seen": "2026-11-19",
+      "status": "new"
+    },
+    {
+      "host": "kevinhipke.com",
+      "url": "https://kevinhipke.com/?ref=minimal.gallery",
+      "title": "Kevin Hipke – Dutch Design &amp; Art Direction in London | Brand Systems, Digital Craft, Design Strategy",
+      "source": "Minimal Gallery",
+      "first_seen": "2026-11-19",
+      "last_seen": "2026-11-19",
+      "status": "new"
+    },
+    {
+      "host": "openinghours.studio",
+      "url": "https://openinghours.studio/?ref=minimal.gallery",
+      "title": "OPENINGHOURS Studio",
+      "source": "Minimal Gallery",
+      "first_seen": "2026-11-19",
+      "last_seen": "2026-11-19",
+      "status": "new"
+    },
+    {
+      "host": "demandespeciale.ca",
+      "url": "https://demandespeciale.ca/en/?ref=minimal.gallery",
+      "title": "Demande Spéciale — design studio in Montreal",
+      "source": "Minimal Gallery",
+      "first_seen": "2026-11-19",
+      "last_seen": "2026-11-19",
+      "status": "new"
+    },
+    {
+      "host": "jay.tel",
+      "url": "https://jay.tel/?ref=minimal.gallery",
+      "title": "Jaytel",
+      "source": "Minimal Gallery",
+      "first_seen": "2026-11-19",
+      "last_seen": "2026-11-19",
+      "status": "new"
+    },
+    {
+      "host": "dateofbirth.com.au",
+      "url": "https://www.dateofbirth.com.au/?ref=minimal.gallery",
+      "title": "Branding &amp; Design Agency Melbourne | Date Of Birth",
+      "source": "Minimal Gallery",
+      "first_seen": "2026-11-19",
+      "last_seen": "2026-11-19",
+      "status": "new"
+    },
+    {
+      "host": "ntch.design",
+      "url": "https://ntch.design/?ref=minimal.gallery",
+      "title": "Ilnaz Khasanshin — Senior Product Designer",
+      "source": "Minimal Gallery",
+      "first_seen": "2026-11-19",
+      "last_seen": "2026-11-19",
+      "status": "new"
+    },
+    {
+      "host": "photography.maximilianberndt.com",
+      "url": "https://photography.maximilianberndt.com/?ref=minimal.gallery",
+      "title": "Maximilian Berndt",
+      "source": "Minimal Gallery",
+      "first_seen": "2026-11-19",
+      "last_seen": "2026-11-19",
+      "status": "new"
+    },
+    {
+      "host": "zeyraglow.com",
+      "url": "https://zeyraglow.com/?ref=minimal.gallery",
+      "title": "Zeyra Glow | Natural Body Care Products in the UAE",
+      "source": "Minimal Gallery",
+      "first_seen": "2026-11-19",
+      "last_seen": "2026-11-19",
+      "status": "new"
+    },
+    {
+      "host": "noth.in",
+      "url": "https://www.noth.in/?ref=minimal.gallery",
+      "title": "Nothin&#x27; | Home",
+      "source": "Minimal Gallery",
+      "first_seen": "2026-11-19",
+      "last_seen": "2026-11-19",
+      "status": "new"
+    },
+    {
+      "host": "petrillo.studio",
+      "url": "https://petrillo.studio/?ref=minimal.gallery",
+      "title": "Petrillo.studio",
+      "source": "Minimal Gallery",
+      "first_seen": "2026-11-19",
+      "last_seen": "2026-11-19",
+      "status": "new"
+    },
+    {
+      "host": "inmysho.es",
+      "url": "https://inmysho.es/?ref=minimal.gallery",
+      "title": "In My Shoes - Iconic Pieces. New Chapters.",
+      "source": "Minimal Gallery",
+      "first_seen": "2026-11-19",
+      "last_seen": "2026-11-19",
+      "status": "new"
+    },
+    {
+      "host": "onlines.com.ar",
+      "url": "https://onlines.com.ar/?ref=minimal.gallery",
+      "title": "Onlines — Diseño y desarrollo de sitios web",
+      "source": "Minimal Gallery",
+      "first_seen": "2026-11-19",
+      "last_seen": "2026-11-19",
+      "status": "new"
+    },
+    {
+      "host": "mathiasadolfsson.dev",
+      "url": "https://mathiasadolfsson.dev/?ref=minimal.gallery",
+      "title": "Mathias Adolfsson - Independent Creative Engineer",
+      "source": "Minimal Gallery",
+      "first_seen": "2026-11-19",
+      "last_seen": "2026-11-19",
+      "status": "new"
+    },
+    {
+      "host": "meliketurgut.com",
+      "url": "https://meliketurgut.com/?ref=minimal.gallery",
+      "title": "me · like — Melike Turgut",
+      "source": "Minimal Gallery",
+      "first_seen": "2026-11-19",
+      "last_seen": "2026-11-19",
+      "status": "new"
+    },
+    {
+      "host": "carterogunsola.com",
+      "url": "https://carterogunsola.com/?ref=minimal.gallery",
+      "title": "Carter Ogunsola :: Creative Developer &amp; Brand Engineer",
+      "source": "Minimal Gallery",
+      "first_seen": "2026-11-19",
+      "last_seen": "2026-11-19",
+      "status": "new"
+    },
+    {
+      "host": "registered-commons.com",
+      "url": "https://registered-commons.com/?ref=minimal.gallery",
+      "title": "Registered Commons",
+      "source": "Minimal Gallery",
+      "first_seen": "2026-11-19",
+      "last_seen": "2026-11-19",
+      "status": "new"
+    },
+    {
+      "host": "ardor.cloud",
+      "url": "https://ardor.cloud/retro-computer/?ref=minimal.gallery",
+      "title": "Ardor Retro Computer — Explore Ardor on a Phosphor CRT",
+      "source": "Minimal Gallery",
+      "first_seen": "2026-11-19",
+      "last_seen": "2026-11-19",
+      "status": "new"
+    },
+    {
+      "host": "kalokyeung.com",
+      "url": "https://www.kalokyeung.com/?ref=minimal.gallery",
+      "title": "Kalok Yeung",
+      "source": "Minimal Gallery",
+      "first_seen": "2026-11-19",
+      "last_seen": "2026-11-19",
+      "status": "new"
+    },
     {
       "host": "productionportugal.com",
       "url": "https://productionportugal.com/",
