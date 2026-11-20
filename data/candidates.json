@@ -1,6 +1,42 @@
 {
-  "updated": "2026-11-19",
+  "updated": "2026-11-20",
   "items": [
+    {
+      "host": "protipmarketing.com",
+      "url": "http://protipmarketing.com/en/?ref=minimal.gallery",
+      "title": "PROTIP Marketing",
+      "source": "Minimal Gallery",
+      "first_seen": "2026-11-20",
+      "last_seen": "2026-11-20",
+      "status": "new"
+    },
+    {
+      "host": "philipphafner.com",
+      "url": "https://philipphafner.com/?ref=minimal.gallery",
+      "title": "Philipp Hafner",
+      "source": "Minimal Gallery",
+      "first_seen": "2026-11-20",
+      "last_seen": "2026-11-20",
+      "status": "new"
+    },
+    {
+      "host": "enode.com",
+      "url": "https://enode.com/?ref=minimal.gallery",
+      "title": "Enode: Orchestrating energy for the next grid",
+      "source": "Minimal Gallery",
+      "first_seen": "2026-11-20",
+      "last_seen": "2026-11-20",
+      "status": "new"
+    },
+    {
+      "host": "thursdayschild.global",
+      "url": "https://www.thursdayschild.global/?ref=minimal.gallery",
+      "title": "Thursday&#39;s Child",
+      "source": "Minimal Gallery",
+      "first_seen": "2026-11-20",
+      "last_seen": "2026-11-20",
+      "status": "new"
+    },
     {
       "host": "nucleoapp.com",
       "url": "https://nucleoapp.com/",
