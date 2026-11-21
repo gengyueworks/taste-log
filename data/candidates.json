@@ -1,6 +1,278 @@
 {
-  "updated": "2026-11-20",
+  "updated": "2026-11-21",
   "items": [
+    {
+      "host": "threejspunk.com",
+      "url": "https://www.threejspunk.com/",
+      "title": "Threejs-Punk Drive | Cyberpunk driving game in WebGPU & Three.js by Anderson Mancini and Sunag",
+      "source": "Awwwards · 每日精选",
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "status": "new"
+    },
+    {
+      "host": "197historiasilustradas.com",
+      "url": "https://www.197historiasilustradas.com/",
+      "title": "197 Historias Ilustradas",
+      "source": "Awwwards · 每日精选",
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "status": "new"
+    },
+    {
+      "host": "vadimcarazan.com",
+      "url": "https://vadimcarazan.com/",
+      "title": "Vadim Carazan, Creative Director",
+      "source": "Awwwards · 本周",
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "status": "new"
+    },
+    {
+      "host": "ondocollective.jp",
+      "url": "https://ondocollective.jp/",
+      "title": "Ondo Collective",
+      "source": "Awwwards · 本周",
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "status": "new"
+    },
+    {
+      "host": "davaris.gr",
+      "url": "https://davaris.gr/",
+      "title": "Homepage - Davaris",
+      "source": "Awwwards · 本周",
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "status": "new"
+    },
+    {
+      "host": "layersoftime.studio",
+      "url": "https://layersoftime.studio/",
+      "title": "LAYERS OF TIME — The show runs on our clock.",
+      "source": "Awwwards · 本周",
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "status": "new"
+    },
+    {
+      "host": "neuv.fr",
+      "url": "https://neuv.fr",
+      "title": "NEUV · Art Direction Studio for Agencies: 3D, AI & Identity",
+      "source": "Awwwards · 本周",
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "status": "new"
+    },
+    {
+      "host": "onform.studio",
+      "url": "https://www.onform.studio/",
+      "title": "ONFORM",
+      "source": "Awwwards · 本周",
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "status": "new"
+    },
+    {
+      "host": "archivio.garonzi1925.com",
+      "url": "https://archivio.garonzi1925.com/",
+      "title": "Archivio Garonzi",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "status": "new"
+    },
+    {
+      "host": "plastichuman.org",
+      "url": "https://plastichuman.org/",
+      "title": "Plastic Human — an investigation into the plastic inside us",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "status": "new"
+    },
+    {
+      "host": "vs-goods.store",
+      "url": "https://vs-goods.store/",
+      "title": "VS/Goods - Plug-and-play mockups created by hot designers for real creators",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "status": "new"
+    },
+    {
+      "host": "doemedia.com",
+      "url": "https://doemedia.com/cymbiotika/",
+      "title": "Cymbiotika Case Study: 49% Q4 Revenue Growth | DOE Media",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "status": "new"
+    },
+    {
+      "host": "digitalpanda.com",
+      "url": "https://www.digitalpanda.com",
+      "title": "Digital Panda | Living, Breathing, Digital Experiences",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "status": "new"
+    },
+    {
+      "host": "kopetzki.law",
+      "url": "https://kopetzki.law/",
+      "title": "Home | Kopetzki",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "status": "new"
+    },
+    {
+      "host": "caffe.design",
+      "url": "https://www.caffe.design/quizzone/en",
+      "title": "Design Quiz",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "status": "new"
+    },
+    {
+      "host": "cedarcreative.net",
+      "url": "https://cedarcreative.net/",
+      "title": "Cedar",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "status": "new"
+    },
+    {
+      "host": "strikedrive.xyz",
+      "url": "https://strikedrive.xyz/",
+      "title": "Strike Ecosystem: a drivable 3D map of Strike Finance",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "status": "new"
+    },
+    {
+      "host": "partner.clleancode.com",
+      "url": "https://partner.clleancode.com/",
+      "title": "Clleancode – Agency Partnerships &amp; White-Label Delivery",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "status": "new"
+    },
+    {
+      "host": "loopindustries.com",
+      "url": "https://loopindustries.com/",
+      "title": "Loop Industries - Home",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "status": "new"
+    },
+    {
+      "host": "happenboard.com",
+      "url": "https://happenboard.com/",
+      "title": "HappenBoard - Block-Native Events Calendar Plugin for WordPress",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "status": "new"
+    },
+    {
+      "host": "odama.io",
+      "url": "https://odama.io",
+      "title": "Odama Studio - UI/UX, Web &amp; Product Design Studio",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "status": "new"
+    },
+    {
+      "host": "vaonis.com",
+      "url": "https://vaonis.com/pages/product/atlas",
+      "title": "Atlas, the Modular Smart Telescope | Vaonis",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "status": "new"
+    },
+    {
+      "host": "erikjchamorro.com",
+      "url": "https://www.erikjchamorro.com",
+      "title": "Pintor al óleo y surrealista en Dubái | Erik Chamorro",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "status": "new"
+    },
+    {
+      "host": "anomalybrands.com",
+      "url": "https://anomalybrands.com/",
+      "title": "Hello World",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "status": "new"
+    },
+    {
+      "host": "cosmicenterprises.co",
+      "url": "https://cosmicenterprises.co/",
+      "title": "COSMIC · Creative, Technology &amp; Interior, One Crew",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "status": "new"
+    },
+    {
+      "host": "reframehk.com",
+      "url": "https://reframehk.com",
+      "title": "ReframeHK | Hong Kong Web Studio",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "status": "new"
+    },
+    {
+      "host": "veo3ai.io",
+      "url": "https://www.veo3ai.io/flow-ai",
+      "title": "Flow AI Video Generator Online Free",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "status": "new"
+    },
+    {
+      "host": "accentboissons.com",
+      "url": "https://accentboissons.com/",
+      "title": "Accent — Boissons pétillantes bio et françaises, sans alcool",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "status": "new"
+    },
+    {
+      "host": "poulo.site",
+      "url": "https://www.poulo.site/",
+      "title": "",
+      "source": "Awwwards · 本周",
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "status": "dead",
+      "reason": "HTTP 429"
+    },
+    {
+      "host": "unionproperties.org",
+      "url": "https://unionproperties.org/",
+      "title": "",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "status": "dead",
+      "reason": "URLError"
+    },
     {
       "host": "protipmarketing.com",
       "url": "http://protipmarketing.com/en/?ref=minimal.gallery",
