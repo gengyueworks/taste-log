@@ -775,5 +775,12 @@
     "name": "MUBI",
     "url": "https://mubi.com/",
     "category": "策展与灵感网络"
+  },
+  {
+    "date": "2026-11-22",
+    "site_id": "huly",
+    "name": "Huly",
+    "url": "https://huly.io/",
+    "category": "交互与动效"
   }
 ]
