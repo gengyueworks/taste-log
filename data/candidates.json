@@ -1,6 +1,276 @@
 {
-  "updated": "2026-11-25",
+  "updated": "2026-11-26",
   "items": [
+    {
+      "host": "fineacts.co",
+      "url": "https://fineacts.co/",
+      "title": "Fine Acts – A Global Creative Studio for Social Impact",
+      "source": "Awwwards · 本周",
+      "first_seen": "2026-11-26",
+      "last_seen": "2026-11-26",
+      "status": "new"
+    },
+    {
+      "host": "morrow.valerian.studio",
+      "url": "https://morrow.valerian.studio",
+      "title": "MORROW",
+      "source": "Awwwards · 本周",
+      "first_seen": "2026-11-26",
+      "last_seen": "2026-11-26",
+      "status": "new"
+    },
+    {
+      "host": "bratiiev.com",
+      "url": "https://www.bratiiev.com/",
+      "title": "Bohdan Ratiiev",
+      "source": "Awwwards · 本周",
+      "first_seen": "2026-11-26",
+      "last_seen": "2026-11-26",
+      "status": "new"
+    },
+    {
+      "host": "carnilove.ashfall.studio",
+      "url": "https://carnilove.ashfall.studio/",
+      "title": "Carnilove | Home",
+      "source": "Awwwards · 本周",
+      "first_seen": "2026-11-26",
+      "last_seen": "2026-11-26",
+      "status": "new"
+    },
+    {
+      "host": "premotio.com",
+      "url": "https://premotio.com/",
+      "title": "premotio — finished design into polished motion",
+      "source": "Awwwards · 本周",
+      "first_seen": "2026-11-26",
+      "last_seen": "2026-11-26",
+      "status": "new"
+    },
+    {
+      "host": "mms.inherited.band",
+      "url": "https://mms.inherited.band/",
+      "title": "INHERITED – ME, MYSELF &amp; SAM (EP DEBUT)",
+      "source": "Awwwards · 本周",
+      "first_seen": "2026-11-26",
+      "last_seen": "2026-11-26",
+      "status": "new"
+    },
+    {
+      "host": "library.jjangik.kr",
+      "url": "https://library.jjangik.kr/",
+      "title": "Interaction Library · Jungik Lee",
+      "source": "Awwwards · 本周",
+      "first_seen": "2026-11-26",
+      "last_seen": "2026-11-26",
+      "status": "new"
+    },
+    {
+      "host": "andreas.vision",
+      "url": "https://andreas.vision",
+      "title": "Andreas Kruszakin, growth-focused design engineer in Europe",
+      "source": "Awwwards · 本周",
+      "first_seen": "2026-11-26",
+      "last_seen": "2026-11-26",
+      "status": "new"
+    },
+    {
+      "host": "alexandracapitanescu.com",
+      "url": "https://alexandracapitanescu.com/",
+      "title": "Alexandra Căpitănescu - Official Website",
+      "source": "Awwwards · 本周",
+      "first_seen": "2026-11-26",
+      "last_seen": "2026-11-26",
+      "status": "new"
+    },
+    {
+      "host": "asapiece.com",
+      "url": "https://www.asapiece.com/",
+      "title": "ASA® Home",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-26",
+      "last_seen": "2026-11-26",
+      "status": "new"
+    },
+    {
+      "host": "gofundme.com",
+      "url": "https://gofundme.com/kind-50",
+      "title": "The Kind 50 | GoFundMe",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-26",
+      "last_seen": "2026-11-26",
+      "status": "new"
+    },
+    {
+      "host": "fojcikdominik.com",
+      "url": "https://fojcikdominik.com/",
+      "title": "Dominik Fojcik | Crafting unique websites and experiences for founders and artists",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-26",
+      "last_seen": "2026-11-26",
+      "status": "new"
+    },
+    {
+      "host": "xn--rpal-0ra.de",
+      "url": "https://xn--rpal-0ra.de/en",
+      "title": "Holzwerke Rückerl · Pallets, export packaging, own logistics",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-26",
+      "last_seen": "2026-11-26",
+      "status": "new"
+    },
+    {
+      "host": "sparkplugin.com",
+      "url": "https://www.sparkplugin.com",
+      "title": "Spark Plugin &mdash; The Ultimate Design Toolkit For Squarespace",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-26",
+      "last_seen": "2026-11-26",
+      "status": "new"
+    },
+    {
+      "host": "offsite.attio.com",
+      "url": "https://offsite.attio.com/",
+      "title": "Attio Offsite",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-26",
+      "last_seen": "2026-11-26",
+      "status": "new"
+    },
+    {
+      "host": "stay22.com",
+      "url": "https://www.stay22.com",
+      "title": "Stay22 | Affiliate monetization for creators &amp; platforms",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-26",
+      "last_seen": "2026-11-26",
+      "status": "new"
+    },
+    {
+      "host": "fundacionrosalia.com",
+      "url": "https://fundacionrosalia.com/",
+      "title": "Fundación Rosalía",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-26",
+      "last_seen": "2026-11-26",
+      "status": "new"
+    },
+    {
+      "host": "markage360.com",
+      "url": "https://www.markage360.com",
+      "title": "Digital Marketing &amp; AI Agency in Gurugram | MarkAge360",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-26",
+      "last_seen": "2026-11-26",
+      "status": "new"
+    },
+    {
+      "host": "seifrinat.com",
+      "url": "https://www.seifrinat.com/",
+      "title": "Rinat Seif Marking Sheet",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-26",
+      "last_seen": "2026-11-26",
+      "status": "new"
+    },
+    {
+      "host": "oxnod.webflow.io",
+      "url": "https://oxnod.webflow.io/",
+      "title": "Oxnod - Webflow HTML website template",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-26",
+      "last_seen": "2026-11-26",
+      "status": "new"
+    },
+    {
+      "host": "vaishaliayurveda.com",
+      "url": "https://www.vaishaliayurveda.com",
+      "title": "Vaidya Vaishali - Ancient wisdom for lasting vitality",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-26",
+      "last_seen": "2026-11-26",
+      "status": "new"
+    },
+    {
+      "host": "shanzhy.io",
+      "url": "http://shanzhy.io",
+      "title": "Shanzhy",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-26",
+      "last_seen": "2026-11-26",
+      "status": "new"
+    },
+    {
+      "host": "vandanar.design",
+      "url": "https://vandanar.design/",
+      "title": "home - vandana",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-26",
+      "last_seen": "2026-11-26",
+      "status": "new"
+    },
+    {
+      "host": "alisteragency.ca",
+      "url": "https://www.alisteragency.ca/",
+      "title": "Alister | Your Next Creative Agency &amp; Marketing Department",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-26",
+      "last_seen": "2026-11-26",
+      "status": "new"
+    },
+    {
+      "host": "letzkola.lu",
+      "url": "https://www.letzkola.lu/en/",
+      "title": "Be lokal, Lët'z Kola — 100% Luxembourgish soft drinks",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-26",
+      "last_seen": "2026-11-26",
+      "status": "new"
+    },
+    {
+      "host": "process.st",
+      "url": "https://www.process.st/",
+      "title": "Process Street | Compliance Operations Platform",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-26",
+      "last_seen": "2026-11-26",
+      "status": "new"
+    },
+    {
+      "host": "torquestudio.es",
+      "url": "https://torquestudio.es/",
+      "title": "Torque Studio – Marketing design subscription for startups and growing teams",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-26",
+      "last_seen": "2026-11-26",
+      "status": "new"
+    },
+    {
+      "host": "smartthings.de",
+      "url": "https://smartthings.de",
+      "title": "Smart Things — Websites, Shops, Tools, Beratung",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-26",
+      "last_seen": "2026-11-26",
+      "status": "new"
+    },
+    {
+      "host": "musicwave.ai",
+      "url": "https://www.musicwave.ai/",
+      "title": "Free AI Music Generator — Create Songs from Text in minutes",
+      "source": "Awwwards · 提名",
+      "first_seen": "2026-11-26",
+      "last_seen": "2026-11-26",
+      "status": "new"
+    },
+    {
+      "host": "autorouter.com",
+      "url": "https://autorouter.com/",
+      "title": "AutoRouter: AI Model Router for Codex and Claude Code",
+      "source": "SaaS Landing Page",
+      "first_seen": "2026-11-26",
+      "last_seen": "2026-11-26",
+      "status": "new"
+    },
     {
       "host": "polpharmabiologics.com",
       "url": "https://www.polpharmabiologics.com/",
