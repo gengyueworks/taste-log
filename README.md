@@ -22,6 +22,7 @@ Taste Log 把网页灵感整理成可以再次调用的判断：每条记录包�
 | 在线首页 | 今日推荐、全年打卡、搜索、分类筛选、时间线和推荐历史 |
 | `data/sites.json` | 站点档案的主数据 |
 | `data/daily-picks.json` | 每日推荐的历史记录 |
+| `data/pending.json` | 待补判断区：点名值得看、但还说不出「哪个细节能拿走」的条目，判断补齐后移进主库 |
 | `docs/aesthetic-cards.md` | 从具体页面细节提炼出的审美卡片 |
 | `docs/criteria.md` | 站点进入主库前要满足的收录标准 |
 | `docs/preferences.md` | 个人审美偏好与判断维度 |
