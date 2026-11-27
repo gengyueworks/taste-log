@@ -1,0 +1,18 @@
+{
+  "meta": {
+    "title": "待补判断",
+    "note": "主理人点名值得看、但还没落到「哪个细节能拿走」的条目先放这里。不进 data/sites.json，不在首页展示；判断补齐后移进主库。每条必须写清楚「为什么现在补不了」。"
+  },
+  "items": [
+    {
+      "id": "last-boring-slide",
+      "name": "The Last Boring Slide",
+      "url": "https://claude.ai/artifact/Cy2d8Vn63CnzCtonA1LSah#dominoes-2",
+      "added": "2026-11-27",
+      "category": "motion",
+      "tag": "演示稿 / Claude artifact",
+      "why_kept": "主理人当场点名「这个 PPT 做得厉害」，收进来做以后做 PPT 时的版式参照。",
+      "gap": "链接要登录 Claude 才打得开，抓取只拿到空壳；只看得到标题和 #dominoes-2 这类页锚点分页，逐页的版式、断行、转场都没看到，写不出可迁移的具体判断。等一次能登录的逐页截图或导出的静态页再补。"
+    }
+  ]
+}
